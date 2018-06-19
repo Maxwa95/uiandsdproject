@@ -1,9 +1,35 @@
 
-    .filter{
-        background-color: #1e88e5;
-        width:100%;
-    }
+   .filter{
+    background-color: #50c1e9;
+    width:100%;
+    height: 80px;
+    background-image:url("/assets/img/underHeader/bgProfile.jpg");
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Product{
+    margin-bottom: 30px;
+    border-bottom: 1px solid lightgray;
+    background-color: rgba($color: #fff, $alpha: .90);
+    border :1px solid #f7f7f7;
+    transition:all .3s ease-in-out;
+    box-shadow: 0px 0px 5px 1px lightgrey;
+
     
+    &:hover{
+        box-shadow: 0px 0px 20px 3px lightgrey;
+        border :2px solid transparent;
+        border-top: 2px solid #50c1e9
+        ;
+        box-shadow: 0px 0px 17px 3px lightgrey;
+        border-top: 2px solid #50c1e9;
+    }
+
+}
+
     .profileproducts{
     
         background-image: url(../../assets/img/bgPattern/6.png);
@@ -20,7 +46,7 @@
         
         &:hover{
             box-shadow: 0px 0px 17px 3px lightgrey;
-            border-top: 2px solid blue;
+            border-top: 2px solid #50c1e9;
         }
     
     }
