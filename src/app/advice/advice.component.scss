@@ -1,0 +1,51 @@
+//@import "../../assets/scss/general.scss";
+.bgAdvice{
+    background-image:url("/assets/img/underHeader/bgAdvice.jpg");
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+//----------------------section advice
+.advice{
+    direction: rtl;
+    text-align: right;
+    background-image: url(../../assets/img/bgPattern/6.png);
+    background-repeat: repeat;
+    height: 100%;
+    div{
+        h5{
+            font-family: droid-reg;   
+        }
+        hr{
+            width: 220px;
+            margin-right: 0;
+            background-color:  #50c1e9;
+            height: 1px;
+        }
+        .card{
+            background-color: rgba($color: #fff, $alpha: .90);
+            transition:all .3s ease-in-out;
+            box-shadow: 0px 0px 5px 1px lightgrey;
+            .card-body{
+                p{
+                font-family: droid-reg;
+                line-height: 1.8;
+                }
+            }
+            &:hover{
+                box-shadow: 0px 0px 20px 3px lightgrey;
+            }
+        }
+    }
+    div{
+        img{
+            background-color: rgba($color: #fff, $alpha: .90);
+            transition:all .3s ease-in-out;
+            box-shadow: 0px 0px 5px 1px lightgrey;
+            &:hover{
+                box-shadow: 0px 0px 20px 3px lightgrey;
+            }
+        }
+    }
+}

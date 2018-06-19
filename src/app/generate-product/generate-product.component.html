@@ -1,0 +1,196 @@
+<section class="bgCreat">
+</section>
+<section class="editProduct">
+  <section class="container-fluid mb-5">
+      <div class="row pt-5">
+        <div class="col-8 offset-2 form">
+          <div class="row">
+          <!-- <!-- <div class="col-6 p-4">
+            <div class="row mb-2">
+              <div class="col-12">
+                  <img src="/assets/img/file1.jpg" class="img-fluid w-100" alt="">
+                   <div class="upload-btn-wrapper">
+                      <button class="btun">Upload a file</button>
+                      <input type="file" name="myfile" multiple />
+                    </div>
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <img src="/assets/img/file1.jpg" class="img-fluid" alt="">
+                  </div>                
+                
+                
+                <div class="col-4">
+                    <img src="/assets/img/file1.jpg" class="img-fluid" alt="">
+                  </div>                
+                
+                <div class="col-4">
+                  <img src="/assets/img/file1.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+          </div> -->
+
+
+          <div class="col-12">
+ 
+                <div class="form-row mb-3">
+                  <div class="form-group col-md-12 text-right">
+                    <label for="inputEmail4">اسم القطعة</label>
+                    <input type="text" class="form-control text-right">
+                  </div>
+                </div>
+    
+                <div class="form-row mb-3">     
+                  <div class="form-group col-md-6 text-right">
+                    <label for="inputPassword4">رقم الصنف</label>
+                    <input type="number" class="form-control text-right">
+                  </div>
+                  <div class="form-group col-md-6 text-right">
+                      <label for="inputAddress">التصنيف</label>
+                      <select id="inputState" class="form-control">
+                        <option *ngFor="let item of cates" value="{{item.CategoriesId}}">{{item.CategoriesName}}</option>
+                        
+                      </select>
+                    </div>
+                  </div> 
+
+                  <div class="form-row mb-3">
+                    <div class="form-group col-md-6  text-right ">
+                      <label for="inputState">الموديل</label>
+                      <select id="inputState" class="form-control">
+                          <option *ngFor="let item of models" value="{{item.ModelId}}">{{item.ModelName}}</option>
+                          
+                        </select>
+                      </div>
+                      <div class="form-group col-md-6 text-right">
+                        <label for="inputState">الماركة</label>
+                        <select id="inputState" class="form-control">
+                          <option *ngFor="let item of brands" value="{{item.BrandId}}">{{item.BrandName}}</option>
+                        
+                        </select>
+                      </div>
+                    </div>
+                    
+                    <div class="form-row mb-4">     
+                       <div class="form-group col-md-6 text-right">
+                         <label for="inputPassword4">اسم المصنع </label>
+                         <input type="text" class="form-control text-right">
+                       </div>
+                       <div class="form-group col-md-6 text-right">
+                           <label for="inputAddress">حالة المنتج</label>
+                           <select id="inputState" class="form-control">
+                               <option selected></option>
+                               <option>NEW</option>
+                               <option>USED</option>
+                             </select>
+                        </div>
+                      </div>
+  
+                      <div class="form-row mb-3">     
+                         <div class="form-group col-md-6 text-right">
+                           <label for="inputPassword4"> تاريخ التصنيع</label>
+                           <input type="date" class="form-control text-right">
+                         </div>
+                         <div class="form-group col-md-6 text-right">
+                             <label for="inputAddress">توافق </label>
+                             <select id="inputState" class="form-control">
+                                 <option selected></option>
+                                 <option>جديد</option>
+                                 <option>مستعمل</option>
+                               </select>
+                          </div>
+                        </div>
+                    <div class="form-row mb-3 text-right">
+                  
+                    <div class="form-group col-md-6 text-right">
+                      <label for="inputAddress2">عدد القطع</label>
+                      <input type="number" class="form-control text-right">
+                    </div>
+                    
+              
+                    
+                    <div class="form-group col-md-6 text-right">
+                      <label for="inputAddress">بلد المنشأ</label>
+                      <input type="text" class="form-control text-right">
+                    </div> 
+                  </div>
+    
+                  <div class="form-row mb-3 text-right">
+        
+                    <div class="form-group col-md-6 text-right">
+                      <label for="inputAddress2">الخصم</label>
+                      <input type="number" class="form-control text-right">
+                    </div>
+    
+              
+    
+                    <div class="form-group col-md-6 text-right">
+                      <label for="inputAddress">السعر</label>
+                      <input type="number" class="form-control text-right">
+                    </div> 
+                </div>
+    
+              
+    
+    
+    
+                <div class="form-group">
+                    <div class="form-group col-md-12 text-right">
+                      <label for="exampleFormControlTextarea1" >الوصف</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="col-12 mb-3">
+                  <div class="row">
+                    <div class="col-3">
+                        <img src="/assets/img/file1.jpg" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-3">
+                        <img src="/assets/img/file1.jpg" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-3">
+                        <img src="/assets/img/file1.jpg" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-3">
+                        <img src="/assets/img/file1.jpg" class="img-fluid" alt="">
+                    </div>
+
+
+                    <div class="col-12">
+                       <input type="file" multiple (change)="onChange($event, showFileNames)" />
+                       <input #showFileNames/>
+
+                    </div>
+                  </div>
+
+                </div> 
+
+
+
+    
+                
+                <button class="btn btn-primary text-center mr-3">حفظ</button>
+                <button type="submit" class="btn btn-secondary text-center">رجوع</button>
+
+
+        </div>
+        </div>
+      </div>
+
+      <div class="col-2">
+          <ul>
+              <li routerLink ="/SellerPage">المنتجات</li>
+              <li  class="active">اضافة منتج </li>
+              <li>اعدادات الحساب</li>
+          </ul>
+      </div>
+    </div>
+    </section>
+</section>
+

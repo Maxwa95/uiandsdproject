@@ -1,0 +1,57 @@
+@import "../../assets/scss/variables.scss";
+.editAccountHeader2{
+    background-image:url("/assets/img/bgProfile.jpg");
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+//----------------------section edit account
+.editAccount2{
+    background-image: url(../../assets/img/bgPattern/6.png);
+    background-repeat: repeat;
+    height: 100%;
+    .row{
+        div{
+            hr{
+                width: 80px;
+                margin-right: 1px;
+                border:1px solid #1e88e5;
+            }
+        }
+        .form{
+            width: 40vw;
+            margin: 0 auto;
+            background-color: $white-color;
+            direction: rtl;
+            text-align: right;
+            border-radius: 20px;
+            border: 1px solid #1e88e5;
+            padding: 30px 40px;
+            div{
+                label{
+                    color: $gray-color-1;
+                    }
+                }
+            }
+            div{
+                button{
+                    background-color: #1e88e5;
+                    color: white;
+                }
+            }
+        .headline{
+            background-color: #f7f7f7;
+            padding: 20px;
+            a{
+                text-decoration: none;
+             p{
+                 color: black;
+                } 
+                p:hover{
+                 color: #1e88e5;
+                } 
+            } 
+        }
+    }
+}

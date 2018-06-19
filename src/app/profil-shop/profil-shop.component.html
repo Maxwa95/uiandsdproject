@@ -1,0 +1,94 @@
+<section class="profileShopHeader py-5 mb-5">
+</section>
+<section class="profileData text-right mb-5">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-9">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h6 class="card-title text-right">{{companyProfile.CompanyName}} </h6>
+                            <div class="card-text">
+                            <div class="row">
+                                <div class="col-5"><p>({{companyProfile.view}})</p></div>
+                                <div class="col-7 text-right">
+                                    <i class="fas fa-star iconx"></i>
+                                    <i class="fas fa-star iconx"></i>
+                                    <i class="fas fa-star iconx"></i>
+                                    <i class="fas fa-star iconx"></i>
+                                    <i class="fas fa-star iconx"></i>
+                                </div>
+                                <div class="col-5 text-right">
+                                    <i class="far fa-eye iconz"></i>{{companyProfile.view}}
+                                </div>
+                                <div class="col-7"><p>عدد المشاهدات</p></div>
+                                <div class="col-12"><p>{{companyProfile.Description}}</p></div>
+                                <div class="col-12"><p> {{compafnyProfile.HomePhone}}<i class="fas fa-phone icony"></i></p></div>
+                                <div class="col-12"><p>{{companyProfile.Address}}<i class="fas fa-map-marker icony"></i></p></div>
+                                <div class="col-12 text-right mb-3">
+                                   <a routerLink="/edit-account1"> <button class="secondary_button"> اعدادات الحساب </button> </a>
+                                </div>  
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="card-img-top" src="./assets/img/spare.jpg" alt="Card image cap">
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- section table product -->
+<section class="editProduct mb-5">
+  <div class="container">
+        <div class="row mb-5">
+            <div class="col-sm-12 mb-3 text-right">
+                <h3>المنتجات</h3>
+                <hr>
+            </div>
+            <div class="col-12 text-right"><a routerLink="/edit-account1"></a>
+                <button class="buttonAdd"> أضافة منتج </button></div> 
+        </div>
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered text-right">
+                <thead>
+                <tr>
+                    <th scope="col"> </th>
+                    <th scope="col"> </th>
+                    <th scope="col">اسم القطعة</th>
+                    <th scope="col">رقم الصنف</th>
+                    <th scope="col">عدد القطع</th>
+                    <th scope="col">بلد المنشأ</th>
+                    <th scope="col">السعر</th>
+                    <th scope="col">التصنيف</th>
+                    <th scope="col">الموديل</th>
+                    <th scope="col">الماركة</th>
+                    <th scope="col">الصورة</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><button class="remove btn btn-danger">حذف</button></td>
+                    <td><button class="edit">تعديل</button></td>
+                    <td>سير قطع غيار لسكوتر</td>
+                    <td>٦٤٣٨٧٦٥٣</td>
+                    <td>قطع غيار</td>
+                    <td> الصين</td>
+                    <td>١٢٠٠ جنية</td>
+                    <td>قطع غيار</td>
+                    <td>٢٠١٦</td>
+                    <td>BMW</td>
+                    <td scope="row"><img class="card-img-top" src="./assets/img/spare.jpg"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div> 
+    </div>
+  </div>
+</section>

@@ -1,0 +1,151 @@
+
+<!-- Registration Form  -->
+<body>
+    <div class="register p-5 text-white my-5">
+        <div class="logo d-flex justify-content-center align-items-center">
+            <a href="" class="text-center w-100"><img src="./assets/img/logo.png" alt="logo"></a>
+        </div>
+        
+        <div class="row pt-3">
+            <div class="form-group col-sm-12 pb-2">
+          <div class="row">  
+            <!-- <form action="" class="form-register"> -->
+            <div class="person-details" *ngIf="!companyStatus == true">
+                <div class="form-group col-sm-12 pb-2">
+                    <label for="exampleInputEmail1">البريد الالكتروني </label>
+                    <input type="email" class="form-control"
+                     [(ngModel)]="client.Email"
+                      id="exampleInputEmail1"
+                      name="email"  
+                      [(ngModel)]="user.username"
+                      required
+                      name="field" #email="ngModel" ngvemail
+                      [ngModelOptions]="{ updateOn: 'blur' }"
+                      >
+                      <p *ngIf="email.errors?.email" class="alert alert-danger mt-2"> ايميل خاطئ</p>
+                </div>
+                <div class="form-group col-sm-12 pb-2">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="exampleInputNumber">التليفون  <span class="require">*</span></label>
+                            <input type="email" [(ngModel)]="client.PhoneNumber"
+                             class="form-control" id="exampleInputNumber" 
+                             aria-describedby="emailHelp"
+                             name="phone" #phone="ngModel" number
+                             >
+                             <p *ngIf="phone.errors?.number" class="alert alert-danger mt-2"> رقم تليفون خاطئ</p>
+                        </div>
+                        <div class="col-sm-6">
+                                <label for="exampleInputNumber">المحافظة  <span class="require">*</span></label>                            
+                                 <select   [ngModelOptions]="{ updateOn: 'blur' }"  name="gov" #gov="ngModel" required class="form-control"[(ngModel)]="client.city" >
+                                        <!--<option value="">اختـــر المدينـــة</option>-->
+                                        <option value="51">اسوان</option>
+                                        <option value="49">اسيوط</option>
+                                        <option value="50">الأقصر</option>
+                                        <option value="47" selected>الإسكندرية</option>
+                                        <option value="41">الإسماعيلية</option>
+                                        <option value="38">البحيره</option>
+                                        <option value="39">الجيزه</option>
+                                        <option value="510">الحسنيه</option>
+                                        <option value="588">الخارجة</option>
+                                        <option value="589">الداخلة</option>
+                                        <option value="414">الدقهلية</option>
+                                        <option value="508">الزقازيق</option>
+                                        <option value="57">السلوم</option>
+                                        <option value="42">السويس</option>
+                                        <option value="37">الشرقية</option>
+                                        <option value="55">الطور</option>
+                                        <option value="54">العريش</option>
+                                        <option value="517">الغربية</option>
+                                        <option value="58">الغردقه</option>
+                                        <option value="590">الفرافرة</option>
+                                        <option value="52">الفيوم</option>
+                                        <option value="36">القاهره</option>
+                                        <option value="413">القليوبية</option>
+                                        <option value="467">المحلة الكبرى</option>
+                                        <option value="45">المنصورة</option>
+                                        <option value="410">المنوفية</option>
+                                        <option value="40">المنيا</option>
+                                        <option value="587">الوادي الجديد</option>
+                                        <option value="48">بنى سويف</option>
+                                        <option value="46">بورسعيد</option>
+                                        <option value="399">حلوان</option>
+                                        <option value="44">دمياط</option>
+                                        <option value="469">ديرب نجم</option>
+                                        <option value="56">رأس البر</option>
+                                        <option value="412">رفح</option>
+                                        <option value="402">سوهاج</option>
+                                        <option value="53">شرم الشيخ</option>
+                                        <option value="584">صان الحجر</option>
+                                        <option value="470">صفط زريق</option>
+                                        <option value="518">طنطا</option>
+                                        <option value="509">فاقوس</option>
+                                        <option value="398">قنا</option>
+                                        <option value="403">كفر الشيخ</option>
+                                        <option value="592">كفر صقر</option>
+                                        <option value="507">منيا القمح</option>
+                        
+                                </select>    
+                                <p *ngIf="gov.errors?.required" class="alert alert-danger mt-2">هذا الحقل مطلوب</p>
+                    
+                        </div>
+                    </div>    
+                </div>
+            </div>
+
+                <div class="form-group col-sm-12 pb-2">
+                    <label for="exampleInputEmail1"> نوع العمل  <span class="require">*</span></label>
+                    <select  (change)="addcompany()" class="form-control" name="op"  [(ngModel)]="companyStatus">
+                        <option value="" >مشتري</option>
+                        <option value="true" >بائع </option>
+                    </select>
+                </div>
+            <div class="company-details" *ngIf="!companyStatus == false">
+                <div class="row">
+                    <div class="form-group col-sm-6 pb-2">
+                        <label for="companyName"> اسم الشركة  <span class="require">*</span></label> 
+                        <input type="text" class="form-control" 
+                        [(ngModel)]="seller.CompanyName" 
+                        id="companyName"
+                        name="companyName"
+                        #cname="ngModel"
+                        required
+                        [ngModelOptions]="{ updateOn: 'blur' }" 
+                        >
+                    <p *ngIf="cname.errors?.required" class="alert alert-danger mt-2">هذا الحقل مطلوب</p>
+                        
+                    </div> 
+                    <div class="form-group col-sm-6 pb-2">
+                        <label for="companyAddress">  تليفون الشركة </label> 
+                        <input type="text" class="form-control"
+                         [(ngModel)]="seller.HomePhone" 
+                         id="companyAddress"
+                         name="cphone"
+                         #cphone="ngModel"
+                         required
+                         [ngModelOptions]="{ updateOn: 'blur' }" 
+                         >
+                         <p *ngIf="cphone.errors?.required" class="alert alert-danger mt-2">هذا الحقل مطلوب</p>
+                    </div>
+                    <div class="form-group col-sm-12 pb-2">
+                        <label for="companyAddress">  عنوان الشركة </label> 
+                        <input type="text" class="form-control" [(ngModel)]="seller.Address" id="companyAddress">
+                    </div>                                
+                    <div class="form-group col-sm-12 pb-2">
+                        <label for="companyAddress">  وصف للشركة  </label> 
+                        <textarea name="" id="" cols="10" rows="5" class="form-control" [(ngModel)]="seller.Description" ></textarea>
+                    </div>
+                </div>
+            </div>       
+                 
+                <div class="buttons w-100 d-flex justify-content-between">
+                    <button routerLink="../register"  class="btn text-center ml-2">للخلف</button>
+                    <button   class="btn btn-custom-gray text-center"  (click)="registerseller11()">سجل</button>
+                </div>  
+            <!-- </form>       -->
+            </div>
+        <!--</form>-->
+             </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,43 @@
+%backgroundStyle {
+    background-position: right;
+    background-size: cover;
+}
+
+
+.slider {
+    width: calc(100vw - 17px);
+    // min-height: calc(100vh - 125px);
+    overflow: hidden;
+    direction: rtl;
+    text-align: right;
+    @extend %backgroundStyle;
+    display: none;
+    @media (min-width:992px) {
+        display: block
+    }
+    .img-box {
+        padding-right: 0;
+        padding-bottom: 10px;
+        .img {
+            background-image: url('../../assets/img/Adv/3.jpg');
+            @extend %backgroundStyle;
+            height: 100%;
+        }
+        
+        //  Here We Will USE SASS Foor Loop
+    }
+    .img-box:nth-of-type(2) .img{
+        background-image: url('../../assets/img/Adv/2.jpg');
+    } 
+    .img-box:nth-of-type(3) .img{
+        background-image: url('../../assets/img/Adv/1.jpg')
+    }
+    .img-box:nth-of-type(4) .img{
+        background-image: url('../../assets/img/Adv/4.jpg')
+    }
+
+}
+
+
+
+

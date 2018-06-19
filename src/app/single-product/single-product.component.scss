@@ -1,0 +1,72 @@
+section {
+    text-align: right;
+    direction: rtl;
+    font-family: droid-reg
+}
+.pattern{
+    background-image: url(../../assets/img/bgPattern/4.png);
+    background-repeat: repeat;
+    height: 100%;
+}
+
+.ProductInfo , .featurd{
+    p {
+        text-align: right;
+    }
+    
+    .secondary_button{
+        background-color: transparent;
+        border-radius: 5px;
+        border: 1px solid #fbc326;
+        color: #fbc326;
+        padding: 7px 15px ;
+
+    }
+
+    .fa-star{
+        color: #fbc326;
+    }
+
+    
+.card{
+    border: none;
+    border-radius: 0;
+    background-color: #f7f7f7;
+}
+.borderBottom {
+    border-bottom: 3px solid #50c1e9;
+}
+
+
+
+.singlProductHeader{
+    background-image:url("http://placehold.it/1200x230");
+    background-size: cover; 
+    height: 230px;
+
+}
+
+
+}
+
+i {
+    color: #fbc326;
+    font-size: 12px;
+} 
+
+.price {
+    font-size: 1.3rem
+}
+.btn-primary {
+    background-color: #50c1e9;
+    border: none;
+}
+.x{
+    width: 80px;
+    margin-right: 0;
+    background-color:  #50c1e9;
+    height: 1px;
+}
+.text-primary{
+    color: #50c1e9!important;
+}

@@ -1,0 +1,147 @@
+<section class="bgCart">
+</section>
+<section class="cart py-5">
+        <div class="container">
+            <h3 class="py-3">عربة التسوق <bdi>({{allCarts.length}})</bdi></h3>
+            <div class="row" *ngIf="allCarts?.length > 0">
+                <!-- col contain information about product when add to cart -->
+                <div class=" col-md-8 col-12 text-right bor mb-3">
+                    <div class="row">
+                        <div class="col-12 pt-3 cart-item" *ngFor="let item of allCarts">
+                                <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>                             
+                            <div class="row">
+                                <div class="col-sm-3 pt-5 pr-5">
+                                    <img src="http://gearapi.azurewebsites.net/Content/ProdImages/{{item.product.Imgs[0].ImgUrl}}"> 
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="card">
+                                        <div class="card-body">
+                                                <h5 class="card-title">{{item.product.ProductName}}</h5>
+                                                    <div class="row">
+                                                    <!-- <div class="col-6 mb-1">
+                                                        <p class="card-text">السعر</p>
+                                                    </div> -->
+                                                    <div class="col-12 mb-1">
+                                                        <p class="card-text font-weight-bold text-primary price"> {{item.product.Price}} جنية</p>
+                                                    
+                                                    </div>
+                                                    <div class="col-6 mb-1 d-flex align-items-center">
+                                                        <p class="card-text">الكمية</p>
+                                                    </div>
+                                                    <div class="col-6 mb-1">
+                                                        <input type="number" [(ngModel)]="item.quantity" min="1" max="15" class="form-control w-25" (change)="edititem(item)">
+                                                    </div>
+                                                    <div class="col-6 mb-1">
+                                                        <p class="card-text">رقم الصنف</p>
+                                                    </div>
+                                                    <div class="col-6 mb-1">
+                                                        <p class="card-text"> 235697844 </p>
+                                                        <!-- {{item.product.Description.PartNumber}} -->
+                                                    </div>
+                                                    <div class="col-6 mb-1">
+                                                        <p class="card-text"> الماركة</p>
+                                                    </div>
+                                                    <div class="col-6 mb-1">
+                                                        <p class="card-text"> BMW </p>
+                                                        <!-- {{item.product.bra.BrandName}} -->
+                                                    </div>
+                                                    <div class="col-12 mb-1">
+                                                         <p class="font-weight-bold"> الشحن مجانى على هذه القطعة <i class="fa fa-mark"></i></p>
+                                                    </div>                                                
+                                                </div>
+                                                <hr>
+                                                <a  (click)="removeitem(item)" style="cursor: pointer">مسح</a>
+                                            </div>                                   
+                                                <!-- <a (click)="removeitem(item)" style="cursor: pointer;"><i class="fas fa-trash-alt pl-2"></i></a> -->
+                                                <!-- <a (click)="edititem(item)" style="cursor: pointer;"><i class="fas fa-edit pl-2"></i></a> -->
+                                       
+                                            </div>
+                                        
+                                       
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>                    
+                </div>
+    
+                <!-- col contain the whole total about product when add to cart -->
+                <div class=" col-md-4 col-12 total">
+                    <div class="card text-right ">
+                        <div class="card-body pt-0">
+                            <div class="row">
+                                <div class="col-sm-12 mb-3 sum">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h5 class="card-title p-0 mb-2"> المجموع :</h5>
+                                        </div>
+                                        <div class="col-12">
+                                            <p class="card-text"> {{chkout.total}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 p-0">
+                                    <button (click)="openModal(template)" type="button" class="btn btn-primary btn-lg btn-block">  تابع عملية الشراء</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+             
+             <div class="emptyCart text-center" *ngIf="allCarts?.length < 1">
+                 <img src="../../assets/img/empty_cart_retina.png" alt="empty cart" class="w-50">
+                 <h6 class="py-5"> عربة التسوق فارغة  <a href=""> تسوق الان </a></h6>
+             </div>
+    </section>
+
+    
+
+     
+    <ng-template #template>
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">هل انت متأكد من القيام بعملية الشراء ؟</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        
+        <button type="button" class="btn btn-primary"  (click)="confirmOrder(templateNested)">نعم</button>
+    </div>
+</ng-template>
+
+<ng-template #templateNested>
+    <div class="modal-header d-flex justify-content-end">
+        <h4 class="mr-3 pr-3">تم اتمام الطلب بنجاح</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="closeMoldels()"> 
+                   <span aria-hidden="true">&times;</span> </button>
+
+      </div>
+      
+    </ng-template>
+
+
+    <!--
+    <ng-template #template>
+        <div class="modal-header"­>
+        <h4 class="modal-title pull-left">هل انت متأكد من تأكيد عملية الشراء ؟ </h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        <button type="button" class="btn btn-primary" (click)="openModal2(templateNested)">نعم !</button>
+        </div>
+        </ng-template>
+        
+        <ng-template #templateNested>
+        <div class="modal-header border-0">
+        <h4 class="modal-title pull-left">تم إضافة المنتج الى العربة بنجاح </h4>
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        
+        </ng-template>
+        -->

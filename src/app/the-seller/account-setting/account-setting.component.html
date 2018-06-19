@@ -1,0 +1,104 @@
+<section class="editProduct py-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2 ">
+            <ul class="border x">
+                <li class="" routerLink="../sellerPage">المنتجات</li>
+                <li class="" routerLink ="../generateproduct/:id">اضافة منتج </li>
+                <li class="" class="active" >إعدادات الحساب</li>
+            </ul>
+       </div>
+      <div class="col-10">
+        <h3>إعدادات الحساب</h3>
+        <div class="account-info bg-white p-3">
+          <div class="main-setting d-flex justify-content-between align-items-center border-bottom">
+            <!-- <h5>معلومات الحساب</h5> -->
+            <ul>
+              <li class="text-right">البريد الالكترني : <span>adelabodoma@gmail.com</span></li>
+              <li class="text-right">كلمة المرور <span>*******</span></li>
+            </ul>
+            <button class="btn " (click)="open(content)">تعديل</button>
+          </div>
+          <!-- <h6> معلومات الشركة</h6> -->
+          <div class="main-setting d-flex justify-content-between align-items-center border-bottom">
+              <ul>
+                  <li class="text-right">اسم الشركة:   <span>شركة الصباح</span></li>
+                  <li class="text-right">عنوان الشركة: <span>الاسكندرية - محرم بيك</span></li>
+                  <li class="text-right">تليفون الشركة: <span>2035984632</span></li>
+              </ul>
+              <button class="btn" (click)="openPersonal(personalSetting)">تعديل</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--  Main Setting Poup -->
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title ml-auto">الاعدادت الرئيسية</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group text-right">
+          <!-- <label for="dateOfBirth">البريد الالكتروني</label> -->
+          <input type="text" class="form-control text-right" placeholder="البريد الالكتروني">
+        </div>
+        <div class="form-group text-right">
+            <!-- <label for="dateOfBirth">كلمة المرور القديمة</label> -->
+            <input type="text" class="form-control text-right" placeholder="كلمة المرور القديمة">
+        </div>
+        <div class="form-group text-right">
+              <!-- <label for="dateOfBirth">كلمة المرور الجديده</label> -->
+              <input type="text" class="form-control text-right" placeholder="كلمة المرور الجديدة">
+         </div>
+        <div class="form-group text-right">
+                <!-- <label for="dateOfBirth">تاكيد كلمة المرور الجديدة</label> -->
+                <input type="text" class="form-control text-right" placeholder="تأكيد كلمة المرور الجديدة">
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-primary" (click)="c('Save click')">تعديل</button>
+    </div>
+  </ng-template>  
+  <hr>
+
+  <ng-template #personalSetting let-c="close" let-d="dismiss">
+      <div class="modal-header">
+        <h4 class="modal-title ml-auto">اعدادت الشركة</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group text-right">
+            <!-- <label for="dateOfBirth">البريد الالكتروني</label> -->
+            <input type="text" class="form-control text-right" placeholder="اسم الشركة">
+          </div>
+          <div class="form-group text-right">
+              <!-- <label for="dateOfBirth">كلمة المرور القديمة</label> -->
+              <input type="text" class="form-control text-right" placeholder="عنوان الشركة">
+          </div>
+          <div class="form-group text-right">
+                <!-- <label for="dateOfBirth">كلمة المرور الجديده</label> -->
+                <input type="text" class="form-control text-right" placeholder="تليفون الشركة">
+           </div>
+          <div class="form-group text-right">
+                  <!-- <label for="dateOfBirth">تاكيد كلمة المرور الجديدة</label> -->
+                  <textarea type="text" rows="3" class="form-control text-right" placeholder="وصف الشركة"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-primary" (click)="c('Save click')">تعديل</button>
+      </div>
+    </ng-template>  
+    <hr>
+  

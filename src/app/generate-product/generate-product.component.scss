@@ -1,0 +1,94 @@
+.bgCreat{
+    background-image:url("/assets/img/underHeader/bgCreat.jpg");
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.editProduct{
+    background-image: url(../../assets/img/bgPattern/6.png);
+    background-repeat: repeat;
+    height: 100%;
+    font-family: droid-reg;
+}
+.form{
+    box-shadow: 0px 0px 20px 1px lightgrey;
+    background-color: rgba($color: #fff, $alpha: .90);
+    border-radius: 7px;
+}
+
+
+h2 { 
+color:#50c1e9;
+}
+
+.editProduct {
+height: 100%;
+background-color: #fbfbfb
+}
+
+label{
+color: #343a40;
+}
+
+input , textarea , select{
+background-color: #f7f7f7;
+}
+
+.upload-btn-wrapper {
+position: relative;
+overflow: hidden;
+display: inline-block;
+}
+
+.btun {
+border: 2px solid gray;
+color: gray;
+background-color: white;
+padding: 8px 20px;
+border-radius: 8px;
+font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=file] {
+font-size: 100px;
+position: absolute;
+left: 0;
+top: 0;
+opacity: 0;
+}
+
+
+
+ul{
+    list-style-type: none;
+    border: 1px solid lightgray;
+    padding: 0;
+    li {
+
+        padding: 20px;
+        //border-top: 1px solid lightgray;
+        //border-bottom: 1px solid lightgray;
+        text-align: center;
+        background-color: white;
+        transition: all 0.6s;
+        
+    }
+
+    li:hover {
+        cursor: pointer;
+        background-color: #47b0d6;
+        color: white;
+    }
+
+
+    .active {
+        background-color: #50c1e9;
+        color: white;
+
+
+    }
+
+}
+
+

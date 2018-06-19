@@ -1,0 +1,167 @@
+<section class="bgEdit">
+</section>
+
+
+<section class="editProduct pt-5">
+    <section class="container mb-5">
+        <div class="row pt-5">
+          <div class="col-8 offset-2 form">
+            <div class="row">
+            
+            <div class="col-12">
+              
+                  <div class="form-row mb-4">
+                    <div class="form-group col-md-12 text-right">
+                      <label for="inputEmail4">اسم القطعة</label>
+                      <input type="email" class="form-control text-right" [(ngModel)]="products.product.ProductName">
+                    </div>
+                  </div>
+                  <div class="form-row mb-4">     
+                    <div class="form-group col-md-6 text-right">
+                      <label for="inputPassword4">رقم الصنف</label>
+                      <input type="text" class="form-control text-right" [(ngModel)]="products.Desc.PartNumber">
+                    </div>
+                    <div class="form-group col-md-6 text-right">
+                        <label for="inputAddress">التصنيف</label>
+                        
+                      </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="form-row mb-5">
+                      <div class="form-group col-md-6  text-right ">
+                        <label for="inputState">الموديل</label>
+                      
+                        </div>
+                        <div class="form-group col-md-6 text-right">
+                          <label for="inputState">الماركة</label>
+                          
+                        </div>
+                      </div>
+                      
+                      <div class="form-row mb-4">     
+                         <div class="form-group col-md-6 text-right">
+                           <label for="inputPassword4">اسم المصنع </label>
+                           <input type="text" class="form-control text-right" [(ngModel)]="products.Company[0].CompanyName">
+                         </div>
+                         <div class="form-group col-md-6 text-right">
+                             <label for="inputAddress">حالة المنتج</label>
+                             <select id="inputState" class="form-control" [(ngModel)]="products.product.state">
+                                 <option selected >{{products?.product?.state}}</option>
+                                 <!-- <option>جديد</option> -->
+                                 <!-- <option>مستعمل</option> -->
+                               </select>
+                          </div>
+                        </div>
+    
+                        <div class="form-row mb-4">     
+                           <div class="form-group col-md-6 text-right">
+                             <label for="inputPassword4"> تاريخ التصنيع</label>
+                             <input type="date" class="form-control text-right" [(ngModel)]="products.Desc.YearOfProduct">
+                           </div>
+                           <div class="form-group col-md-6 text-right">
+                               <label for="inputAddress">توافق </label>
+                               <textarea name="" class="form-control" rows="3" [(ngModel)]="products.Desc.ModelFlexibility"></textarea> 
+                            </div>
+                          </div>
+                      <div class="form-row mb-4 text-right">
+                    
+                      <div class="form-group col-md-6 text-right">
+                        <label for="inputAddress2">عدد القطع</label>
+                        <input type="number" class="form-control text-right" [(ngModel)]="products.product.Quantity">
+                      </div>
+                      <div class="form-group col-md-6 text-right">
+                        <label for="inputAddress">بلد المنشأ</label>
+                        <input type="text" class="form-control text-right" [(ngModel)]="products.product.PlaceOfOrigin">
+                      </div> 
+                    </div>
+      
+                    <div class="form-row mb-4 text-right">
+          
+                      <div class="form-group col-md-6 text-right">
+                        <label for="inputAddress2">الخصم</label>
+                        <input type="number" class="form-control text-right" [(ngModel)]="products.product.Discount">
+                      </div>
+      
+                
+      
+                      <div class="form-group col-md-6 text-right">
+                        <label for="inputAddress">السعر</label>
+                        <input type="number" class="form-control text-right" [(ngModel)]="products.product.Price">
+                      </div> 
+                  </div>
+      
+                
+      
+      
+      
+                  <div class="form-group">
+                      <div class="form-group 0col-md-12 text-right">
+                        <label for="exampleFormControlTextarea1" >الوصف</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="products.Desc.MoreDetails"></textarea>
+                      </div>
+                  </div>
+
+                  
+                <div class="col-12 mb-3">
+                    <div class="row">
+                      <div class="col-3">
+                          <img src="/assets/img/file1.jpg" class="img-fluid" alt="">
+                      </div>
+  
+                      <div class="col-3">
+                          <img src="/assets/img/file1.jpg" class="img-fluid" alt="">
+                      </div>
+  
+                      <div class="col-3">
+                          <img src="/assets/img/file1.jpg" class="img-fluid" alt="">
+                      </div>
+  
+                      <div class="col-3 mb-3">
+                          <img src="/assets/img/file1.jpg" class="img-fluid" alt="">
+                      </div>
+  
+                      <div class="col-12 text-right">
+                          <input type="file" name="" id="" multiple>
+                      </div>
+                    </div>
+  
+                  </div> 
+<!--       
+
+                  <div class="upload-btn-wrapper col-12 text-right">
+                    <button class="btun">Upload photos</button>
+                    <input type="file" name="myfile">
+                  </div> -->
+      
+                  
+                  <button type="submit" class="btn btn-primary text-center mr-3" (click)="edit()">حفظ</button>
+                  <button type="submit" class="btn btn-secondary text-center">رجوع</button>
+
+          </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+</section>
+
+
+
+<!--  Popup Edit -->
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h6 class="modal-title ml-auto">تم تعديل المنتج</h6>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body text-center">
+      <i class="fa fa-check-circle text-primary"></i>
+    </div>
+    <div class="modal-footer">
+    </div>
+  </ng-template>
+    
+  <hr>

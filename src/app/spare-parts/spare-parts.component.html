@@ -1,0 +1,140 @@
+<section class="sparePartsHeader">
+  </section>
+  <section class="spareParts py-5">
+    <section class="container-fluid">
+        <section class="row mb-5">
+  
+          <div class="col-sm-2">
+            <div class="row mb-3 x">    
+              <div class="col-12 mb-3 border-bottom =">
+                 <div class="row">
+                   <!-- <div class="col-2"><i class="fas fa-minus"></i></div> -->
+                   <div class="col-12 mb-3"><h5>الاقسام</h5></div>
+                 </div>
+  
+                 <div class="row body">
+                      <div class="col-12">
+                        <div class="row" *ngFor="let item of catesandbrands.Categories">
+                            <div class="col-2"><input type="checkbox" class="" id="exampleCheck1" (change)="keywords(item.CategoriesName)" ></div>
+                            <div  class="col-8" ><label for="exampleCheck1 mr-5"> {{item.CategoriesName}}</label></div>  
+                        </div>                    
+                    </div>
+                  </div>                    
+              </div>
+  
+   
+              <div class="col-12 mb-3 border-bottom ">
+                  <div class="row">
+                    <!-- <div class="col-2"><i class="fas fa-minus"></i></div> -->
+                    <div class="col-12 mb-3"><h5>الماركات</h5></div>
+                    <input type="text" class="form-control mb-3" placeholder="ابحث" [(ngModel)]="term">
+                  </div>
+    
+                  <div class="row body">
+                       <div class="col-12">
+                         <div class="row" *ngFor="let item of catesandbrands.Brands |filter:term">
+                             <div class="col-2"><input type="checkbox" class="" id="exampleCheck1"  (change)="keyWordsBrand(item.BrandName)"></div>
+                             <div  class="col-8" ><label for="exampleCheck1 mr-5">{{item.BrandName}}</label></div>  
+                          </div>                     
+                       </div>
+                     </div>      
+                  </div>
+  
+                  <div class="col-12 border-bottom mb-3">
+                    <div class="row">
+                        <!-- <div class="col-2"><i class="fas fa-minus"></i></div> -->
+                        <div class="col-12 mb-3"><h5>حالة المنتج</h5></div>
+                    </div>
+  
+                    <div class="row ">
+                        <div class="col-2"><input type="checkbox" class="" id="exampleCheck1" (change)="cstate()" [(ngModel)]="statenew"></div>
+                        <div  class="col-8" ><label for="exampleCheck1 mr-5">جديد</label></div>  
+                    </div> 
+                   
+  
+                    <div class="row ">
+                        <div class="col-2"><input type="checkbox" class="" id="exampleCheck1" (change)="cstate()" [(ngModel)]="stateused"></div>
+                        <div  class="col-8" ><label for="exampleCheck1 mr-5">مستعمل</label></div>  
+                    </div> 
+                  </div>
+  
+  
+                  <div class="col-12 mb-3 ">
+                      <div class="row">
+                          <!-- <div class="col-2"><i class="fas fa-minus"></i></div> -->
+                          <div class="col-12 mb-3"><h5>السعر</h5></div>
+                      </div>
+    
+                      <div class="row ">
+                        <div class="col-6" >
+                            <input type="number" class="form-control"  [(ngModel)]="someMin" (change)="onChange()">
+                          </div>  
+                          
+                          <div  class="col-6" >
+                            <input type="number" class="form-control"  [(ngModel)]="someMax" (change)="onChange()" >
+                          </div>  
+                        
+                      </div>         
+                    </div>
+     
+            </div>
+          </div>
+   
+          <!-- Spare Section -->
+          <div class="col-sm-10">
+              <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>          
+            <div class="row">
+              <div  routerLink="/single/{{item.productId}}" class="col-lg-3 col-sm-4 col-6 mb-5 d-flex align-items-stretch" *ngFor="let item of prod; let i = index">
+                <div class="card-group">
+                    <div class="card position-relative">
+                        <img class="card-img-top" src="http://gearapi.azurewebsites.net/Content/ProdImages/{{item.Imgs[0].ImgUrl}}" class="img-fluid" alt="Card image cap">
+                        <div class="card-body p-0 pt-3 ">
+                            <h6 routerLink="../single/{{item.productId}}" class="card-title text-right">{{item.ProductName}}</h6>
+                            <div class="card-text">
+                                <div class="row text-right">
+                                      <div class="col-7 text-right">
+                                        <ngb-rating [starTemplate]="t" [rate]="item.Rate" max="5" [readonly]="true" ></ngb-rating>
+                                      </div>
+                                      <div class="col-5"><p>({{item.Rate}})</p></div>
+                                <!-- <div class="col-12"><p class="text-right">سعيد نصار</p></div> -->
+                                <div class="col-12 d-flex justify-content-between">
+                                    <div>
+                                        <p class="m-0 "><bdi>جنية</bdi> {{item.Price - item.Price * item.Discount }} </p>
+                                        <span class="text-muted old-price"><bdi>جنية</bdi>{{item.Price}}</span> 
+                                    </div>
+                                    <div class="status">
+                                        <span *ngIf="i < 3">مستعمله</span>
+                                        <span *ngIf="i > 3">جديدة</span>
+                                    </div>
+                                </div>
+
+                                <div class="descount position-absolute">
+                                        <span> {{item.Discount * 100}}%خصم</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              </div>
+          </div>
+      </section>
+    </section>
+  
+    
+      <!--  This is virtual sectio For Rating Stars -->
+      <ng-template #t let-fill="fill">
+          <span class="star" [class.full]="fill === 100">
+            <span class="half" [style.width.%]="fill"><i class="fa fa-star"></i></span><i class="fa fa-star"></i>
+          </span>
+      </ng-template>
+
+
+
+
+<!-- 
+      <ul *ngFor="let item of numbers">
+        <li>{{item}}</li>
+      </ul> -->

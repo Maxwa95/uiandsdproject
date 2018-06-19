@@ -1,0 +1,46 @@
+<section class="bgNeedSpare mt-5">
+</section>
+<section class="needSpare py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <div class=" py-5 x">
+                    <div class="form-row mb-4 ">
+                        <div class="form-group col-md-12 text-right">
+                        <label for="inputEmail4">اسم القطعة</label>
+                        <input type="text" [(ngModel)]="NeedProduct.FullName" class="form-control text-right">
+                        </div>
+                    </div>                    
+            
+   
+                    <div class="form-group">
+                        <div class="form-group col-md-12 text-right p-0">
+                            <label for="exampleFormControlTextarea1" >الوصف</label>
+                            <textarea class="form-control" [(ngModel)]="NeedProduct.TextResponce" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group col-md-12 text-right p-0">
+                            <label for="exampleFormControlFile1">تحميل صورة</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1" (change)="fileUpload($event.target.files)">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary text-center"  (click)="openModal(template)" (click)="submit()">طلب</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ 
+<ng-template #template>
+  <div class="py-4 px-3 d-flex justify-content-end border-bottom  text-right">
+    <h4 class="text-right pr-2 text-success">لقد تم إرسال طلبك بنجاح</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body text-right">
+      عند توافر القطعة سوف تصل اليك رسالة نصية عبر الهاتف المحمول 
+  </div>
+</ng-template>

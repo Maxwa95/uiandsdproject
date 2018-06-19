@@ -1,0 +1,34 @@
+.editProduct{
+    background-image: url(../../../assets/img/bgPattern/4.png);
+    font-family: droid-reg;
+    
+    direction: rtl;
+    text-align: right;
+    .x{
+        list-style-type: none;
+        border: 1px solid lightgray;
+        padding: 0;
+        background-color: white;
+        border: none;
+        li {
+            padding: 10px;
+            text-align: center;
+            
+        }
+
+        li:hover {
+            cursor: pointer;
+            background-color: #47b0d6;
+            color: white;
+        }
+
+
+        .active {
+            background-color: #50c1e9;
+            color: white;
+
+
+        }
+
+    }
+}

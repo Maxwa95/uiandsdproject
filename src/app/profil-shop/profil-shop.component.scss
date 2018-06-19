@@ -1,0 +1,116 @@
+.profileShopHeader{
+    background-image:url("/assets/img/bgProfile.jpg");
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+//----------------------section data about your profile
+.profileData{
+    .row{
+        div{
+            .card{
+                border: none;
+                border-bottom: 2px solid #1e88e5;
+                border-radius: 0px;
+                .card-body{
+                    .row{
+                        div{
+                            .card-text{
+                                .row{
+                                    div{
+                                        .iconx{
+                                            color: #fbc326;
+                                        }
+                                    }
+                                    div{
+                                        .iconz{
+                                            margin-right: 10px;
+                                            color: #1e88e5;
+                                        }
+                                    }
+                                    div{
+                                        .icony{
+                                            margin-left: 20px;
+                                            color: #1e88e5;
+
+                                        }
+                                    }
+                                }
+                                div{
+                                    button{
+                                        border-radius: 5px;
+                                        border: 1px solid #fbc326;
+                                        padding: 7px 15px ;
+                                        background-color: #fbc326;
+                                        color:white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//----------------------- section table
+.editProduct{
+    .row{
+        div{
+            hr{
+                width: 80px;
+                margin-right: 1px;
+                border:1px solid #1e88e5;
+            }
+        }
+        div{
+            .buttonAdd{
+                background-color: #1e88e5;
+                color: white;
+                border-radius: 5px;
+                border: 1px solid #1e88e5;
+                padding: 7px 15px ;
+            }
+        }
+        div{
+            .edit{
+                border: 1px solid #1e88e5;
+                background-color: #1e88e5;
+                color: white;
+                border-radius: 5px;
+                border: 1px solid #1e88e5;
+                padding: 7px 15px ;
+            }
+            .remove{
+                color: white;
+                border-radius: 5px;
+                padding: 7px 15px ;
+            }
+        }
+    }
+    .row{
+        div{
+            table{
+                min-width:900px;
+                overflow: auto;
+                thead{
+                    tr{
+                        th{
+                            border: 1px solid #1e88e5;
+                            background-color: #1e88e5;
+                            color: white;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            border: 1px solid #1e88e5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

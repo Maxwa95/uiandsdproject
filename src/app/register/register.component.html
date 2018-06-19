@@ -1,0 +1,96 @@
+<router-outlet></router-outlet>
+<!-- Registration Form  -->
+<body>
+    <div class="register p-5 text-white my-5">
+        <!-- <div class="logo d-flex justify-content-center align-items-center">
+            <a href="" class="text-center w-100"><img src="./assets/img/logo.png" alt="logo"></a>
+        </div> -->
+            <div class="row pt-3">
+                <form action="" #formRegister>
+                <div class="form-group col-sm-12">
+                    <div class="row">
+                        <span class="col-sm-6 text-right">تسجيل عضو جديد</span>
+                        <hr>                
+                    </div>
+                </div>
+                <div class="form-group col-sm-12 pb-2">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="exampleInputFname">الاسم الاول <span class="require">*</span></label>
+                            <input type="text" [(ngModel)]="client.FirstName"
+                             class="form-control" id="exampleInputFname"
+                            required 
+                            aria-describedby="emailHelp"
+                            name="fname" 
+                            #fname="ngModel"
+                            [rangeLength]="[2, 9]"
+                            [ngModelOptions]="{ updateOn: 'blur' }"
+                             
+                            >
+                            <p *ngIf="fname.errors?.rangeLength" class="alert alert-danger mt-2">
+                               الاسم قصير للغاية
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="exampleInputLname">اسم العائلة <span class="require">*</span></label>
+                            <input type="text" [(ngModel)]="client.LastName" 
+                            class="form-control" id="exampleInputLname" 
+                             required   
+                            aria-describedby="emailHelp"
+                            name="lname" 
+                            #lname="ngModel"
+                            [rangeLength]="[2, 9]"
+                            [ngModelOptions]="{ updateOn: 'blur' }"
+                            >
+                            <p *ngIf="lname.errors?.rangeLength" class="alert alert-danger mt-2">
+                                    الاسم قصير للغاية
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-sm-12 pb-2">
+                    <label for="exampleInputPassword1">كلمة المرور <span class="require">*</span></label>
+                    <input type="password"
+                     [(ngModel)]="client.Password"
+                      class="form-control" 
+                      id="exampleInputPassword1" 
+                      required
+                      name="password" 
+                      #password="ngModel"
+                      [rangeLength]="[6, 20]"
+                      [ngModelOptions]="{ updateOn: 'blur' }"
+                      digits
+
+                      >
+                      <p *ngIf="password.errors?.rangeLength" class="alert alert-danger mt-2">
+                            يجب الا تقل عن 6 حروف وارقام
+                    </p>
+                </div>
+                <div class="form-group col-sm-12 pb-2">
+                    <label for="exampleInputPassword2">تأكيد كلمة المرور <span class="require">*</span></label>
+                    <input  type="password" [(ngModel)]="client.ConfirmPassword" 
+                    class="form-control" id="exampleInputPassword2"
+                    aria-describedby="emailHelp"
+                    required
+                    [notEqualTo]="password"
+                    #certainPassword="ngModel"
+                    name="certainPassword"
+                    [ngModelOptions]="{ updateOn:'blur'}"
+                    #confirm                    
+                    >
+                    <p *ngIf="!certainPassword.errors?.notEqualTo" class="alert alert-danger mt-2">
+                          كلمة السر ليست متشابة
+                    </p>
+                </div>                   
+                <div class="buttons w-100">
+                    <button  (click)="navigate()" class="btn btn-custom btn-custom-gray btn-block text-center">الخطوة التالية</button>
+                </div>     <!--routerLink="/step1"-->   
+            </form>
+            </div>
+            <hr>
+            <a routerLink="../login"> تسجيل الدخول</a>
+    </div>
+
+ 
+</body>

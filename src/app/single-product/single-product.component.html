@@ -1,0 +1,168 @@
+<section class="singlProductHeader">
+
+</section>
+<section class="pattern pt-5">
+    <section class="singlProduct container">
+      <div class="row">
+        <div class="col-12 col-md-4">
+                <div class="row mb-5">
+                    <div class="col-12 mb-3">
+                      <img src="http://gearapi.azurewebsites.net/Content/ProdImages/{{getprod.product.Imgs[0].ImgUrl}}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-3">
+                        <img src="./assets/img/a1-01.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-3">
+                        <img src="./assets/img/a1-01.png" alt="" class="img-fluid">
+                    </div>
+          
+                    <div class="col-3">
+                        <img src="./assets/img/a1-01.png" alt="" class="img-fluid">
+                    </div>
+          
+                    <div class="col-3">
+                        <img src="./assets/img/a1-01.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+              </div>
+          <div class="col-12 col-md-4 col-sm-4  ProductInfo ">
+              <h6 class="card-title text-right text-primary mb-0 price font-weight-bold">{{getprod.product.Price}} جنية</h6>
+              <a href="" class="card-title text-right text-dark">{{getprod.product.ProductName}} </a>
+                <div class="card-text">
+                  <div class="row">
+                      <div class="col-7 text-right">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                        <div class="col-5"><p>({{getprod.product.Rate}})</p></div>
+                        <div class="col-6 font-weight-bold"><p> الماركة</p></div>
+                        <div class="col-6">{{getprod.product.Manufacturer}} </div>
+                        <div class="col-6 font-weight-bold"><p> المنشأ</p></div>
+                        <div class="col-6">{{getprod.product.PlaceOfOrigin}} </div>
+                        <div class="col-6 mb-3 font-weight-bold"><p>المحافظة</p></div>
+                        <div class="col-6"><p>الاسكندرية</p></div>
+    
+                        <div class="col-12 text-right mb-3">
+                            <p class="font-weight-bold">وصف المنتج :</p>
+                            <p>المقالة نوع من الأدب، هي قطعة إنشائية، ذات طول معتدل تُكتب نثراً، وتُهتمُّ بالمظاهر الخارجية للموضوع بطريقة سهلةٍ سريعة، ولا تعنى إلا بالناحية التي تمسُّ الكاتب عن قرب  </p>
+                        </div>
+                        
+                  </div>
+                </div>
+          </div>  
+          <div class="col-12 col-md-3">
+                <div class="add-cart">
+                    <div class="card text-right p-2">
+                        <h5> أضف الى العربة </h5>
+                        <span> خصم {{getprod.product.Discount * 100}}% على هذه القطعة </span>
+                        <hr>
+                        <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>                             
+                        <button class="btn btn-primary" (click)="addToCart()"> أضف الى العربة</button>
+                        <hr>
+                        <p class="font-weight-bold"> حالة المنتج : <span class="text-muted">{{getprod.product.state}}</span>
+                        </p>
+                        <p class="font-weight-bold"> البائع: <a href="">{{getprod.companyname}}</a>
+                        </p>
+                    </div>
+                </div> 
+            </div>
+    
+      </div>  
+    </section>
+    <hr>
+    <!-- Result Section -->
+    <section *ngIf="getprod.otherproducts?.length > 0">
+        <section class="productSec py-3 mb-5">
+            <div class="container">
+                <div class="title text-right pb-3">
+                        <h3 class="d-inline"> سلع ذات صلة</h3> 
+                    </div>
+                <div class="row">
+                    <div class="col-lg-2 col-sm-4 col-6 mb-5 d-flex align-items-stretch" *ngFor="let item of getprod.otherproducts">
+                        <div class="card-group">
+                            <div class="card p-2">
+                                <img class="card-img-top" src="http://gearapi.azurewebsites.net/Content/ProdImages/{{item.Imgs[0].ImgUrl}}" alt="Card image cap">
+                                <div class="card-body p-0 pt-3 ">
+                                    <a  href="single/{{item.productId}}" class="card-title text-right">{{item.ProductName}}</a>  
+                                <div class="card-text">
+                                        <div class="row text-right">
+                                            <div class="col-7 text-right">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="col-5"><p>({{item.Rate}})</p></div>
+                                        <!-- <div class="col-12"><p class="text-right">سعيد نصار</p></div> -->
+                                        <div class="col-12"><p class="mb-0 ">{{item.Price}} جنيه</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    
+    
+    <!--  Comments -->
+    
+    <section class="py-4"> 
+        <div class="container" *ngIf="getprod.comments?.length > 0">
+                <h6> التعليقات </h6>
+                <div class="row" *ngFor="let item of getprod.comments">
+                    <div class="col-sm-1 ">
+                        <img class="img-thumbnail" src="http://placehold.it/50x50" alt="">
+                    </div>
+                    <div class="col-sm-11 ">
+                        <div class="comm_name">
+                            <span> بواسطة <b>{{item.FirstName}}</b></span>
+                        </div>
+                        <div class="comm_content">
+                            <p class="w-50">{{item.Comment}} </p>
+                            <span class="text-primary">{{item.Date}}</span>
+                        </div>
+                        <hr>
+                    </div>                   
+                </div> 
+        </div>
+
+        <div class="container">
+            <h5> التعليقات </h5>
+            <hr class="mb-4 x">
+            <div class="row">
+                <div class="col-sm-1 ">
+                    <img class="img-thumbnail" src="http://placehold.it/50x50" alt="">
+                </div>
+                <div class="col-sm-11 ">
+                    <div class="comm_name">
+                        <span></span>
+                    </div>
+                    <div class="comm_content">
+                      
+                        <span class="text-primary">
+                            
+                            <p class="w-50"> <textarea type="text" placeholder="أضف تعليق" [(ngModel)]="fb.Comment"></textarea>  </p>
+                            <button type="submit" class="btn btn-primary text-center" (click)="submitcomment()">حفظ</button>
+
+                        </span>
+                    </div>
+                    <hr>
+                </div>                   
+            </div> 
+    </div>
+    
+        <!-- <div class="container">
+            <p *ngIf="getprod.comments?.length < 1"> لا توجد تعليقات على هذا المنتج </p>
+        </div> -->
+    </section>
+</section>
+    
+    
+    

@@ -1,0 +1,15 @@
+.orderDetails{
+    text-align: right;
+    background-image: url(../../assets/img/bgPattern/6.png);
+    background-repeat: repeat;
+    height: 100%;
+}
+
+form{
+    background-color: rgba($color: #fff, $alpha: .90);
+    transition:all .3s ease-in-out;
+    box-shadow: 0px 0px 5px 1px lightgrey;
+    &:hover{
+        box-shadow: 0px 0px 20px 3px lightgrey;
+    }
+}

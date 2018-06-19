@@ -1,0 +1,327 @@
+
+// ---------------------------------- Main Section 
+
+section {
+    direction: rtl;
+    text-align: right
+}
+
+h3 {
+    font-family: droid-reg;
+}
+.productSec{
+
+    border-top: 1px solid lightgray;
+    padding-top: 50px !important;
+    font-family: droid-reg;
+    .card-title{
+        color:#1E88E5;
+        padding-bottom: 10px;
+    }
+    
+    .card-title:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    
+    }
+    
+    .card {
+        box-shadow: 0px 0px 10px 1px lightgray;
+        padding: 10px;
+        transition: all .5s ease-in-out ;
+        cursor: pointer;
+        font-family: droid-reg;
+        
+    }
+    
+    .card:hover{
+        box-shadow: 0px 0px 25px 5px lightgray;
+    }
+      
+    span.old-price {
+        text-decoration: line-through;
+        font-size: 15px;
+
+    }
+    .current-price {
+        font-weight: bold
+    }
+
+    .descount {
+        color: #fff;
+        background-color: #ff574b;
+        padding: 2px 10px;
+        font-weight: bold;
+        right: 0;
+        top: 0;
+    }
+    .status {
+        font-size: .9rem;
+        color: #868686;
+    }
+}
+
+
+.title , .titleBestOffers {
+    .d-inline{
+        padding: 10px 20px;
+        background-color: #f7f7f7;
+        padding-bottom: 0;
+        border: 1px solid lightgray;
+        border-bottom: 0px;
+    }
+
+
+}
+
+.titleBestOffers{
+
+    .d-inline{
+        background-color: white;
+    }
+}
+
+
+
+
+.week-offer{
+    width:100%;
+   // background-color: #f7f7f7;
+    
+    .spcial{
+        height: calc(100% - 40px );
+    }
+
+    .text-right {
+        .d-inline{
+            // border-bottom:2px solid blue;
+        } 
+    }
+    
+}
+
+
+.adv {
+    width:100%;
+    img{
+        width: 100%;
+    }
+ 
+}
+
+
+
+//  overlay Card
+
+.overlay{
+    height: 100%;
+    width: calc(100%)!important;
+    background-color: rgba(51, 89, 102, 0.7);
+    transform: translateY(-101%);
+    position: absolute;
+    transition: all .5s
+
+}
+
+.overlay-parent {
+    overflow: hidden;
+}
+
+.overlay-parent:hover .overlay{
+    width: 100%;
+    transform: translateY(0)
+}
+
+
+
+
+
+
+
+
+.client {
+    background-color: #dbedf3;
+}
+
+
+
+
+
+
+
+.mainSec{
+    .container{
+        .row{
+            div{
+                .card{
+                    border: none;
+                }
+                @media only screen and (max-width: 768px) {
+                    .card {
+                        margin-bottom: 50px;
+                    }
+                }
+                @media only screen and (max-width: 767px) {
+                    .two {
+                        width: 200px;
+                        margin: 0 auto;
+                    }
+                }
+                @media only screen and (max-width: 767px) {
+                    h3 {
+                        margin-bottom: 20px;
+                    }
+                }
+                .card-body{
+                    margin: 0px;
+                }
+            }
+        }
+    }
+}
+// ---------------------------------- Section Product 768
+.productSec{
+    background-color: #f7f7f7;
+    .container{
+        .row{
+            div{
+                .one{
+                    border-top: 2px solid #1e88e5; 
+                }
+                .two{
+                    border-top: 2px solid #1e88e5; 
+                }
+                @media only screen and (max-width: 767px) {
+                    .one {
+                        display: none;
+                    }
+                }
+                @media only screen and (max-width: 767px) {
+                    .two {
+                        width: 200px;
+                        margin: 0 auto;
+                    }
+                }
+                @media only screen and (max-width: 767px) {
+                    h3 {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        .row{
+            div{
+                .card-group{
+                    .card{
+                       border: none;
+                       border-bottom: 3px solid #1e88e5;
+                       border-radius: 0px;
+                    }
+                    img{
+                        border-radius: 0px;
+                    }
+                    .card-body{
+                        h5{
+                            text-align: right;
+                        }
+                        p{
+                            text-align: right;
+                            span{
+                                padding-right: 30px;
+                                i{
+                                    color: #fbc326;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// ---------------------------------- Section brand 
+.brand{
+    .container{
+        .row{
+            div{
+                .one{
+                    border-top: 2px solid #1e88e5; 
+                }
+                .two{
+                    border-top: 2px solid #1e88e5; 
+                }
+                @media only screen and (max-width: 767px) {
+                    .one {
+                        display: none;
+                    }
+                }
+                @media only screen and (max-width: 767px) {
+                    .two {
+                        width: 200px;
+                        margin: 0 auto;
+                    }
+                }
+                @media only screen and (max-width: 767px) {
+                    h3 {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+// ---------------------------------- Section comment
+.comment{
+    background-color: #f7f7f7;
+    .container{
+        .row{
+            div{
+                .one{
+                    border-top: 2px solid #1e88e5; 
+                }
+                .two{
+                    border-top: 2px solid #1e88e5; 
+                }
+                @media only screen and (max-width: 767px) {
+                    .one {
+                        display: none;
+                    }
+                }
+                @media only screen and (max-width: 767px) {
+                    .two {
+                        width: 200px;
+                        margin: 0 auto;
+                    }
+                }
+                @media only screen and (max-width: 767px) {
+                    h3 {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        .row{
+            div{
+                img{
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
+.adv{
+    height: 100%;
+}
+
+
+
+
+
+.gray img{
+    filter:grayscale(1);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.gray img:hover{
+    filter:none;
+}

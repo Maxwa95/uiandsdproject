@@ -1,0 +1,85 @@
+//@import "../../assets/scss/general.scss";
+.shopHeader{
+    background-image:url("/assets/img/underHeader/bgShop.jpg");
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+//----------------------section shop
+.shop{
+    direction: rtl;
+    text-align: right;
+    background-image: url(../../assets/img/bgPattern/4.png);
+    background-repeat: repeat;
+    background-size: cover;
+    height: 100%;
+    font-family: droid-reg;
+    .container{
+        div{
+            .card{
+                border: none;
+                border-radius: 0px;
+                margin:0px 10px;
+                background-color: rgba($color: #fff, $alpha: .90);
+                transition:all .3s;
+                box-shadow: 0px 0px 5px 1px lightgrey;
+            
+                // transition: all s ease-in-out ;
+                .imgHere {
+                    overflow: hidden;
+                }
+
+                img{
+                    border-radius: 0px;
+                    transition: all 1.5s;
+                }
+                
+                .card-body{
+                    background-color: white;
+                    padding-bottom: 0px;
+                    .card-text{
+                        i{
+                            color:#fbc326;
+                        }
+                        .white{
+                            color: white;
+                        }
+                    }
+                }
+            }
+            .card:hover{
+                box-shadow: 0px 0px 20px 3px lightgrey;
+                cursor: pointer;
+            
+                img {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+.bg{
+    background-color: white;
+    div{
+        button{
+            background-color: #50c1e9;
+            border: none;
+        }
+    }
+}
+h5 , i{
+    color: #50c1e9;
+}
+
+
+.body{
+    height:300px;
+    overflow-y: auto;
+}
+select:focus{
+outline: none;
+}
+.x{
+    background-color: #fff;
+}

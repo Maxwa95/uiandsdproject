@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gear</title>
+  <base href="/">
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <!-- Tiny Slider  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.7.1/tiny-slider.css">
+  <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.7.1/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.7.1/min/tiny-slider.js"></script>
+
+
+</head>
+<script>
+    var slider = tns({
+      container: '#my-slider',
+      items: 3,
+      slideBy: 'page',
+      autoplay: true
+    });
+    
+    // NOTE: 
+    // prior to v2.0.2, options "container", "controlsContainer", "navContainer" and "autoplayButton" still need to be DOM elements.
+    // e.g. container: document.querySelector('.my-slider'),
+  </script>
+<body>
+  <app-root></app-root>
+</body>
+</html>

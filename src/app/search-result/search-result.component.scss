@@ -1,0 +1,58 @@
+section {
+    direction: rtl;
+    text-align: right
+}
+
+.sparePartsHeader{
+    background-image:url("http://placehold.it/1200x50");
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.spareParts{
+    background-color: #f7f7f7;
+    p {
+        text-align: right;
+    }
+    
+    .secondary_button{
+        background-color: transparent;
+        border-radius: 5px;
+        border: 1px solid #fbc326;
+        color: #fbc326;
+        padding: 7px 15px ;
+
+    }
+
+    .fa-star{
+        color: #fbc326;
+    }
+
+    .card{
+        border: none;
+        border-radius: 0;
+    }
+    .borderBottom {
+        border-bottom: 3px solid #50c1e9;
+    }
+
+
+}
+
+h5 , i{
+    color: #50c1e9;
+}
+
+
+.body{
+    height:200px;
+    overflow-y: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .card{
+        margin-bottom: 30px;;
+    }
+}
