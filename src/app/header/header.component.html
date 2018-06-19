@@ -96,20 +96,19 @@
 
                                 </div>   
                                
-                                <div *ngIf="user != '' ">
+                                <!-- <div *ngIf="user != '' ">
                                 {{' ' +user+ ' '}}
                                 <button (click)='logout()'>تسجيل الخروج</button>
                                 </div>
-                                
+                                 -->
 
-                                <div *ngIf="1 > 10"  ngbDropdown role="group" aria-label="Button group with nested dropdown">
-                                        <button class="btn btn-link pl-2 ml-2" ngbDropdownToggle>Adel Sadek <i class="fas fa-angle-down"></i></button>
+                                <div *ngIf="user != '' "  ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                                        <button class="btn btn-link pl-2 ml-2" ngbDropdownToggle>{{' ' +user+ ' '}} <i class="fas fa-angle-down"></i></button>
                                         <div class="dropdown-menu animate-form login-form" ngbDropdownMenu>
                                             <ul class="p-2">
-                                                <li class="border-bottom py-2"><a class="text-primary" href=""> المشتريات </a></li>
+                                                <li class="border-bottom py-2"><a class="text-primary" routerLink="/profile"> الصفحة الشخصية <i class="fas fa-user-alt"></i> </a></li>
                                                 <li class="border-bottom py-2"><a class="text-primary" href=""> اعدادات الحساب </a></li>
-                                                <li class="border-bottom py-2"><a class="text-primary" href=""> العناوين </a></li>
-                                                <li class="py-2"><a class="text-primary" href=""> خروج </a></li>
+                                                <li class="py-2"><a class="text-primary" (click)='logout()'> تسجيل الخروج </a></li>
                                             </ul>
                                         </div>
                                     </div>  

@@ -1,3 +1,5 @@
+<section class="addresses">
+
 <section class="filter">
   <div class="container">
       <div class="row ">
@@ -44,9 +46,9 @@
               <div class="row">
                 <div class="col-12">
                     <ul>
-                        <li class="border-0">المشتريات</li>
-                        <li class="active"> عناوين الشحن</li>
-                        <li>المفضلة</li>
+                        <li class="border-0" routerLink="/profile">المشتريات</li>
+                        <li  routerLink="/userorders"> القطع المطلوبة </li>
+                        <li  class="active" routerLink="/addresses"> عناوين الشحن</li>
                         <li>اعدادات الحساب</li>
                       </ul>
       
@@ -301,3 +303,5 @@
       <button type="button" class="btn btn-default mr-3 " (click)="confirm()" >تأكيد</button>
   </div>
 </ng-template>
+
+</section>

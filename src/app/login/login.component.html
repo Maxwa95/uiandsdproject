@@ -31,10 +31,10 @@
                      >
                      <p *ngIf="password.errors?.rangeLength" class="alert alert-danger mt-2">الرقم السري خاطى لابد ان يكن اكثر من 8 حروف وارقام</p>                     
                 </div> 
-                <div class="form-group col-sm-12 pb-3 d-flex align-items-center">
+                <!-- <div class="form-group col-sm-12 pb-3 d-flex align-items-center">
                     <input class="ml-3" type="checkbox" name="checkbox" id="exampleInputcheck">
                     <label for="exampleInputcheck"> تذكرني </label>
-                </div>   
+                </div>    -->
                 <div class="buttons w-100">
                     <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
                     <button  [disabled]="!password.valid" class="btn btn-custom btn-custom-gray btn-block text-center" (click)="login()" >تسجيل</button>
