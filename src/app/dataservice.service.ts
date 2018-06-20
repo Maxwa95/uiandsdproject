@@ -267,4 +267,11 @@ return this.http.post("http://gearapi.azurewebsites.net/api/confirmorder",cout,o
     let options = new RequestOptions({ headers: headers });
     return this.http.get(`http://gearapi.azurewebsites.net/api/AccountInfo`,options).toPromise()
    }
+   Getpurchasesprods(access_token : string)
+   {
+    let headers = new Headers();
+    headers.append('Authorization','Bearer '+access_token);
+    let options = new RequestOptions({ headers: headers });
+    return this.http.get(`http://gearapi.azurewebsites.net/api/purchaseproductforclient`,options)
+   } 
 }
