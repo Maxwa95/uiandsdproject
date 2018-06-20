@@ -1,3 +1,10 @@
+.bgProfileK{
+    background-image:url("/assets/img/underHeader/bgProfile.jpg");
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .profileShopHeader{
     background-image:url("/assets/img/underHeader/bgProfile.jpg");
     height: 200px;
@@ -5,11 +12,11 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
 //----------------------section data about your profile
 .bgprofile{
-   // background-image: url(../../../assets/img/bgPattern/4.png);
+    background-image: url(../../assets/img/bgPattern/6.png);
     background-repeat: repeat;
-    background-size: cover;
     height: 100%;
     font-family: droid-reg;
     direction: rtl
@@ -145,6 +152,7 @@
     list-style-type: none;
     border: 1px solid lightgray;
     padding: 0;
+    background-color: white;
     li {
 
         padding: 20px;
@@ -155,13 +163,13 @@
 
     li:hover {
         cursor: pointer;
-        background-color: #1E88E5;
+        background-color: #47b0d6;
         color: white;
     }
 
 
     .active {
-        background-color: #1E88E5;
+        background-color: #50c1e9;
         color: white;
 
 
@@ -190,4 +198,11 @@
     direction: rtl !important;
     font-family: droid-reg !important;
     text-align: right !important
+}
+
+.x{
+    color: gray;
+    &:hover{
+        color: red;
+    }
 }
