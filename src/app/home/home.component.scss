@@ -92,11 +92,11 @@ h3 {
         height: calc(100% - 40px );
     }
 
-    .text-right {
-        .d-inline{
-            // border-bottom:2px solid blue;
-        } 
-    }
+    // .text-right {
+    //     .d-inline{
+    //         // border-bottom:2px solid blue;
+    //     } 
+    // }
     
 }
 
@@ -324,4 +324,11 @@ h3 {
 }
 .gray img:hover{
     filter:none;
+}
+
+hr{
+    width: 80px;
+    margin-right: 0;
+    background-color:  #50c1e9;
+    height: 1px;
 }
