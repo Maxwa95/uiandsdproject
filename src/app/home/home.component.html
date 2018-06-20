@@ -4,9 +4,13 @@
 <!-- section slider product -->
 <div class="title container-fluid text-right">
     <div class="row">
-        
-        <h3 class="d-inline pb-3"> السلع الاكثر رواجا</h3> 
-        <hr>
+        <div class="col-12">
+
+            <div>
+                <h3 class="d-inline pb-3"> السلع الاكثر رواجا</h3> 
+                <hr>
+            </div>
+        </div>
     </div>
 </div>
 <section class="productSec py-3">
@@ -35,7 +39,7 @@
                                         </div>
                                     </div>
                                     <div class="descount position-absolute"  *ngIf="item.Discount > 0">
-                                            <span> <bdi>خصم </bdi>{{item?.Discount }} %</span>
+                                            <span> <bdi>خصم </bdi>{{item.Discount*100 }} %</span>
                                         </div>
                                     </div>
                                 </div>
@@ -50,10 +54,18 @@
 </section>
 
 <!--  Week offers -->
-<div class="text-right title pt-5">
-    <h3 class="d-inline"> أفضل العروض</h3> 
+<div class="text-right container-fluid title pt-5">
+    <div class="row">
+        <div class="col-12">
+
+            <div>
+                <h3 class="d-inline"> أفضل العروض</h3> 
+                <hr>
+            </div>
+        </div>
+    </div>
 </div>
-<section class="week-offer container-fluid py-5">
+<section class="week-offer container-fluid pb-5">
     <div class="row align-items-stretch">
         <!--  Sub offer  -->
         <div class="col-md-6 col-12">
@@ -105,10 +117,16 @@
 </section>
 
 <!--  Recent Product -->
-<div class="title text-right pb-5">
-    <h3 class="d-inline"> وصل مؤخرا</h3> 
-</div>
-<section class="productSec py-5">
+<div class="title container-fluid text-right pb-5">
+        <div class="row">
+                <div class="col-12">
+                    <div>
+                        <h3 class="d-inline"> وصل مؤخرا</h3> 
+                        <hr>
+                    </div>
+                </div>
+            </div></div>
+<section class="productSec pb-5">
     <div class="container-fluid">
         <div class="row">
             <div routerLink="../single/{{item.productId}}" class="col-lg-2 col-sm-4 col-12 mb-5 d-flex align-items-stretch" *ngFor="let item of recentProducts; let i = index">
@@ -134,7 +152,7 @@
                                     </div>
                                 </div>
                                 <div class="descount position-absolute"  *ngIf="item.Discount > 0">
-                                        <span> <bdi>خصم </bdi>{{item?.Discount }} %</span>
+                                        <span> <bdi>خصم </bdi>{{item.Discount*100 }} %</span>
                                     </div>
                                 </div>
                             </div>
