@@ -38,7 +38,7 @@ a=>{
   }
 
   edit(prodid : number){
-    alert(prodid)
+   
   this.router.navigate([`/editProduct/${prodid}`]);
   }
   delete(prodid : number){

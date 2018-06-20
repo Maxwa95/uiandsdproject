@@ -81,6 +81,22 @@
         }
     
     }
+
+
+    .btn-primary{
+        background-color: #50c1e9;
+    }
+
+    .btn-outline{
+        border :1px solid #50c1e9;
+        background-color: transparent;
+        color: #47b0d6;
+    }
+    .btn-outline:hover{
+        border :1px solid #50c1e9;
+        background-color: #50c1e9;
+        color: white;
+    }
     
     
     

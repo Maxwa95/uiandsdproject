@@ -28,7 +28,7 @@ companyStatus:Boolean=false;
       a=>{
 this.route.navigate(["/login"])
 
-      },error=>alert(error)
+      },error=>alert('invalid registration data')
     );
 
    };
@@ -55,14 +55,18 @@ this.route.navigate(["/login"])
           this.route.navigate(["/login"])
         }
                  ,
-               error=>alert(error),
+               error=>alert('invalid registration data'),
                null
        ) }
        else{
         
      console.log(this.seller);
      this.dataService.registerseller(this.seller).subscribe(
-       null,e=>console.log(e)
+       a=>{
+
+
+        this.route.navigate(["/login"])
+       },e=>alert('invalid registration data')
      )
    }
   }
