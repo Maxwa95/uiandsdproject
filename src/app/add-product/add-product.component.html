@@ -1,36 +1,9 @@
 <section class="editProduct">
     <section class="container mb-5">
         <div class="row pt-5">
-          <div class="col-12 form">
-            <div class="row">
-            <div class="col-6 p-4">
-              <div class="row mb-2">
-                <div class="col-12">
-                    <img src="/assets/img/file1.jpg" class="img-fluid w-100" alt="">
-                    
-                </div>
-              </div>
-
-              <div class="row">
-                  <div class="col-4">
-                      <img src="/assets/img/file1.jpg" class="img-fluid" alt="">
-                    </div>                
-                  
-                  
-                  <div class="col-4">
-                      <img src="/assets/img/file1.jpg" class="img-fluid" alt="">
-                    </div>                
-                  
-                  <div class="col-4">
-                    <img src="/assets/img/file1.jpg" class="img-fluid" alt="">
-                  </div>
-              </div>
-
-              
-                <input type="file" name="myfile" (change)="fileUpload($event.target.files)" multiple />
-            
-            </div>
-            <div class="col-6">
+          <div class="col-6 form offset-3">
+            <div class="row py-3">
+            <div class="col-12 ">
 
                   <div class="form-row mb-4">
                     <div class="form-group col-md-12 text-right">
@@ -141,11 +114,12 @@
                         <textarea class="form-control" [(ngModel)]="prod.Desc.MoreDetails" id="exampleFormControlTextarea1" rows="3"></textarea>
                       </div>
                   </div>
-                  
+                  <input type="file" name="myfile" (change)="fileUpload($event.target.files)" multiple />
+
                 
       
                   
-                  <button  class="btn btn-primary text-center mr-3" (click)="save()">حفظ</button>
+                  <button  class="btn btn-primary btn-block text-center mr-3 mt-3" (click)="save()">حفظ</button>
               
           </div>
           </div>
