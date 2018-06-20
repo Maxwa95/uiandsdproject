@@ -41,10 +41,10 @@
                         <!--  Center  --> 
                         <form action="" class="search-form">
                             <div class="row position-relative justify-content-center">
-                                <input type="text" name="search" class="form-control w-100 col-sm-10  rounded-0" placeholder="ابحث هنا" (keyup)="sendKey()"  [(ngModel)]="keywords">
+                                <input type="text" id="inputVal" name="search" class="form-control w-100 col-sm-10  rounded-0" placeholder="ابحث هنا" (keyup)="sendKey()"  [(ngModel)]="keywords">
                                 <div class="col-sm-10">
                                     <div class="result position-absolute w-100">
-                                        <div *ngIf="keywords?.length">
+                                        <div *ngIf="keywords?.length > 0">
                                             <ul class="list-group list-group-flush">
                                                 <li class="list-group-item" *ngFor="let item of search.productsmatch">
                                                     <a href="/search/{{item}}">
@@ -54,12 +54,12 @@
                                              </ul>
                                         </div>
 
-                                        <div *ngIf="search.productsmatch?.length < 1">
+                                        <div *ngIf="search.productsmatch?.length < 1 && keywords?.length > 0" class="orderPart">
                                             <ul class="list-group list-group-flush">
                                                 <li class="list-group-item">
                                                     <div class="d-flex justify-content-between">
                                                         <p>القطعة غير متوفرة </p>
-                                                        <button class="btn btn-primary" routerLink="needproduct">أطلب القطعة </button>
+                                                        <button class="btn btn-primary" routerLink="needproduct" (click)="emptySearch(inputVal)">أطلب القطعة </button>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -157,9 +157,6 @@
       <li class="nav-item px-2 active">
                     <a  routerLink="" class="nav-link" href="">الرئيسية <span class="sr-only">(current)</span></a>
                 </li>
-                <li *ngIf="type == 'Client'" class="nav-item px-2 active">
-                        <a  routerLink="profile" class="nav-link" href="">صفحتى الشخصية <span class="sr-only">(current)</span></a>
-                    </li>
                 <li class="nav-item px-2">
                     <a routerLink="spareparts" class="nav-link" href=""> قطع غيار وأكسسورات</a>
                 </li>
@@ -210,9 +207,6 @@
                 <li class="nav-item px-2 active">
                     <a  routerLink="" class="nav-link" href="">الرئيسية <span class="sr-only">(current)</span></a>
                 </li>
-                <li *ngIf="type == 'Client'" class="nav-item px-2 active">
-                        <a  routerLink="profile" class="nav-link" href="">صفحتى الشخصية <span class="sr-only">(current)</span></a>
-                    </li>
                 <li class="nav-item px-2">
                     <a routerLink="spareparts" class="nav-link" href=""> قطع غيار وأكسسورات</a>
                 </li>

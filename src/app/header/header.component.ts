@@ -105,13 +105,10 @@ location.reload()
 
 
 
-  burgerButton(e) {
-   document.getElementsByClassName('bars-1')[0].classList.toggle("toggle-bars-1")
-   document.getElementsByClassName('bars-2')[0].classList.toggle("toggle-bars-2")
-   document.getElementsByClassName('bars-3')[0].classList.toggle("toggle-bars-3")
-   document.getElementsByClassName('mobile-menu')[0].classList.toggle("show")
+
+  emptySearch(input){
+   document.getElementsByClassName("orderPart")[0].style.display = "none"
+   document.getElementById("inputVal").value= ""
   }
-
-
 
 }
