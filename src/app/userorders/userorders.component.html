@@ -1,4 +1,6 @@
 
+<section class="bgProfileK">
+</section>
 <section class="bgprofile">
   <section class="editProduct py-5">
       <div class="container-fluid">
@@ -36,9 +38,9 @@
                                     <p>{{item.StatuseResponce}}</p>
                                   </td>
                                   <td scope="col" class="mb-0">
-                                        <p><button (click)="delete(item.NeededProductsId)">
-حذف
-                                        </button></p>
+                                    <p (click)="delete(item.NeededProductsId)">
+                                        <i class="fas fa-trash-alt x"></i>
+                                    </p>
                                       </td>
                           </tr>
                         
