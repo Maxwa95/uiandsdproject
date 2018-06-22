@@ -43,7 +43,7 @@ a=>{
   location.reload()
 },
 e=>{
-  alert(e)
+  this.rte.navigate(['/login'])
 }
 )
 

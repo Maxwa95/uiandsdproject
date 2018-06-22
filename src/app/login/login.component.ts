@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 user : login = new login()
 cookieValue = '';
+public check = false;
 public loading = false;
   constructor(private dataService : DataserviceService,private cookieService : CookieService,private rote:Router) 
   {
@@ -33,9 +34,11 @@ public loading = false;
       //access token assign it to what ever
       this.cookieService.set( 'access_token', a.json().access_token,30);//30 days
       window.location.href = '/';
+      this.check = false
     },
     error => {
       this.loading = false;
+      this.check = true
       // alert(error);
     }
   )

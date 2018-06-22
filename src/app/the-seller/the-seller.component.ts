@@ -46,7 +46,7 @@ a=>{
  if  (confirm("Are you sure to delete this product ?"))
  {
   this.data.DeleteProduct(prodid,this.token).subscribe(
-    a=>alert(a),
+    a=>location.reload(),
     e=>alert(e)
   )
 

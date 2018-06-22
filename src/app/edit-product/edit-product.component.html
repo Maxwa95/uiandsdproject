@@ -5,7 +5,7 @@
 <section class="editProduct pt-5">
     <section class="container mb-5">
         <div class="row pt-5">
-          <div class="col-8 offset-2 form">
+          <div class="col-8 offset-2 form p-3">
             <div class="row">
             
             <div class="col-12">
@@ -17,26 +17,20 @@
                     </div>
                   </div>
                   <div class="form-row mb-4">     
-                    <div class="form-group col-md-6 text-right">
+                    <div class="form-group col-md-12 text-right">
                       <label for="inputPassword4">رقم الصنف</label>
                       <input type="text" class="form-control text-right" [(ngModel)]="products.Desc.PartNumber">
                     </div>
                    
                     </div>
-                    
-                    
-                    
-                    <div class="form-row mb-5">
-                     
-                        
-                      </div>
+                  
                       
                       <div class="form-row mb-4">     
-                         <div class="form-group col-md-6 text-right">
+                         <!-- <div class="form-group col-md-6 text-right">
                            <label for="inputPassword4">اسم المصنع </label>
                            <input type="text" class="form-control text-right" [(ngModel)]="products.Company[0].CompanyName">
-                         </div>
-                         <div class="form-group col-md-6 text-right">
+                         </div> -->
+                         <div class="form-group col-md-12 text-right">
                              <label for="inputAddress">حالة المنتج</label>
                              <select id="inputState" class="form-control" [(ngModel)]="products.product.state">
                                  <option selected >{{products?.product?.state}}</option>
@@ -47,11 +41,11 @@
                         </div>
     
                         <div class="form-row mb-4">     
-                           <div class="form-group col-md-6 text-right">
+                           <!-- <div class="form-group col-md-6 text-right">
                              <label for="inputPassword4"> تاريخ التصنيع</label>
                              <input type="date" class="form-control text-right" [(ngModel)]="products.Desc.YearOfProduct">
-                           </div>
-                           <div class="form-group col-md-6 text-right">
+                           </div> -->
+                           <div class="form-group col-md-12 text-right">
                                <label for="inputAddress">توافق </label>
                                <textarea name="" class="form-control" rows="3" [(ngModel)]="products.Desc.ModelFlexibility"></textarea> 
                             </div>
@@ -95,30 +89,6 @@
                   </div>
 
                   
-                <div class="col-12 mb-3">
-                    <div class="row">
-                      <div class="col-3">
-                          <img src="/assets/img/file1.jpg" class="img-fluid" alt="">
-                      </div>
-  
-                      <div class="col-3">
-                          <img src="/assets/img/file1.jpg" class="img-fluid" alt="">
-                      </div>
-  
-                      <div class="col-3">
-                          <img src="/assets/img/file1.jpg" class="img-fluid" alt="">
-                      </div>
-  
-                      <div class="col-3 mb-3">
-                          <img src="/assets/img/file1.jpg" class="img-fluid" alt="">
-                      </div>
-  
-                      <div class="col-12 text-right">
-                          <input type="file" name="" id="" multiple>
-                      </div>
-                    </div>
-  
-                  </div> 
 <!--       
 
                   <div class="upload-btn-wrapper col-12 text-right">
@@ -128,7 +98,7 @@
       
                   
                   <button type="submit" class="btn btn-primary text-center mr-3" (click)="edit()">حفظ</button>
-                  <button type="submit" class="btn btn-secondary text-center">رجوع</button>
+                  <button  routerLink="/SellerPage" class="btn btn-secondary text-center">رجوع</button>
 
           </div>
           </div>

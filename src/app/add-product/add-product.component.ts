@@ -6,6 +6,7 @@ import {Category}from '../models/category';
 import {brand}from '../models/brands';
 import {model}from '../models/model';
 import { log } from 'util';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
@@ -19,7 +20,7 @@ export class AddProductComponent implements OnInit {
   prod:productdesc=new productdesc()
   imgs : File[]
   
-  constructor(private cookieService : CookieService,private Data : DataserviceService) { 
+  constructor(private cookieService : CookieService,private Data : DataserviceService, private rout:Router) { 
 
 
   }
@@ -50,7 +51,8 @@ export class AddProductComponent implements OnInit {
      console.log(a.json().id)
       this.Data.AddImagestoProduct(this.cookieService.get("access_token"),this.imgs,a.json().id)
 .subscribe(a=>{
-alert('done')
+  this.rout.navigate(['SellerPage'])
+// alert('done')
 })
  }
       )

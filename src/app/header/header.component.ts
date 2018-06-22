@@ -107,8 +107,7 @@ location.reload()
 
 
   emptySearch(input){
-   document.getElementsByClassName("orderPart")[0].style.display = "none"
-   document.getElementById("inputVal").value= ""
+  
   }
 
 }
