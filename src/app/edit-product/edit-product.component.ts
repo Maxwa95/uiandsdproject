@@ -5,7 +5,7 @@ import {brand}from '../models/brands';
 import {model}from '../models/model';
 import {productdesc}from '../models/productdesc';
 import { CookieService } from 'ngx-cookie-service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -21,7 +21,7 @@ export class EditProductComponent implements OnInit {
   products:productdesc=new productdesc()
   // products;
   url = '';
-  constructor(private http:DataserviceService, private cookieService : CookieService, private route:ActivatedRoute, private modalService: NgbModal) { 
+  constructor(private http:DataserviceService,private rt:Router ,private cookieService : CookieService, private route:ActivatedRoute, private modalService: NgbModal) { 
     this.url = this.route.snapshot.paramMap.get('id'); 
     this.http.getsingleprod(this.url).subscribe(
       (res) => {
@@ -73,7 +73,8 @@ export class EditProductComponent implements OnInit {
 
     this.http.EditProduct(this.products,this.cookieService.get('access_token')).subscribe(
       a=>{
-        alert('done')
+        // alert('done')
+        this.rt.navigate(['/SellerPage'])
       },
       e=>{
     

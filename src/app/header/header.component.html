@@ -106,7 +106,10 @@
                                         <button class="btn btn-link pl-2 ml-2" ngbDropdownToggle>{{' ' +user+ ' '}} <i class="fas fa-angle-down"></i></button>
                                         <div class="dropdown-menu animate-form login-form" ngbDropdownMenu>
                                             <ul class="p-2">
-                                                <li class="border-bottom py-2"><a class="text-primary" routerLink="/profile"> الصفحة الشخصية <i class="fas fa-user-alt"></i> </a></li>
+                                                <li class="border-bottom py-2">
+                                                    <a class="text-primary" *ngIf="type == 'Client'" routerLink="/profile"> الصفحة الشخصية <i class="fas fa-user-alt"></i></a>
+                                                    <a class="text-primary" *ngIf="type == 'Seller'" routerLink="/SellerPage"> الصفحة الشخصية <i class="fas fa-user-alt"></i></a>
+                                                 </li>
                                                 <li class="border-bottom py-2"><a class="text-primary" href=""> اعدادات الحساب </a></li>
                                                 <li class="py-2"><a class="text-primary" (click)='logout()'> تسجيل الخروج </a></li>
                                             </ul>
@@ -206,6 +209,9 @@
              <ul class="d-flex"> 
                 <li class="nav-item px-2 active">
                     <a  routerLink="" class="nav-link" href="">الرئيسية <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item px-2" *ngIf="type == 'Seller'" >
+                    <a routerLink="SellerPage" class="nav-link" href=""> صفحتى الشخصية</a>
                 </li>
                 <li class="nav-item px-2">
                     <a routerLink="spareparts" class="nav-link" href=""> قطع غيار وأكسسورات</a>

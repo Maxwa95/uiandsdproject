@@ -78,12 +78,12 @@
                     
                                 <!-- <td>٦٤٣٨٧٦٥٣</td> -->
                              <td>
-                                <button (click)="edit(prod.Product.productId)">
+                                <button (click)="edit(prod.Product.productId)" class="btn btn-primary">
                                     تعديل
                                 </button>
                             </td>
                                 <td>
-                                <button (click)="delete(prod.Product.productId)">
+                                <button (click)="delete(prod.Product.productId)" class="btn btn-danger">
                                    حذف
                                </button>
                             </td>
@@ -93,7 +93,7 @@
                                 <td>{{prod.Models.ModelFlexibility}}</td>
                                 <td>{{prod.Brands.BrandName}}</td>
                                 <td>{{prod.Product.ProductName}}</td>
-                                <td> <img src="http://gearapi.azurewebsites.net/Content/ProdImages/{{prod.Product.Imgs[0].ImgUrl}}" alt=""></td>
+                                <td> <img src="http://gearapi.azurewebsites.net/Content/ProdImages/{{prod.Product.Imgs[0].ImgUrl}}" alt="" style="width:100px"></td>
                                  
                             </tr>
     
@@ -104,7 +104,7 @@
                 <div class="col-2 ">
                     <ul>
                         <li class="active">المنتجات</li>
-                        <li routerLink="/order" class="position-relative"><span class="count">2</span> الطلبات</li>
+                        <li routerLink="/order" class="position-relative"> الطلبات</li>
                         <li routerLink ="/addproduct">اضافة منتج </li>
                         <li routerLink="/account">اعدادات الحساب</li>
                     </ul>
@@ -113,27 +113,6 @@
         </div>
     </section>
             
-    <section>
-            <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-center">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                    <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                    <span class="sr-only">Next</span>
-                    </a>
-                </li>
-                </ul>
-            </nav>
-    </section>
 </section>
    
   

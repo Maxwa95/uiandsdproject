@@ -1,222 +1,64 @@
 <section class="filter">
-</section>
-<div class="profileproducts">
-
-<section class="profile container py-5">
-        <div class="row">
-          <div class="col-8 ">
-            <div *ngFor="let item of prods" class="row Product align-items-center py-4">
-                    <div class="col-8 ">
-                    <h4 class="text-right">{{item.prod.ProductName}} </h4>
-                    <p class="text-right"> تم الشراء كمية: <span> {{item.prod.Quantity}}</span></p>
-                    <div class="text-right mb-2">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-right">تاريخ الطلب : <span>{{item.date}}</span></p>
-                    <p class="text-right"><a href=""  class="text-right">تفاصيل الطلب</a></p> 
-                    </div>
-                    <div class="col-4">
-                        <img src="http://gearapi.azurewebsites.net/Content/ProdImages/{{item.prod.Imgs[0].ImgUrl}}" alt="" class="img-fluid">
-                    </div>
-                </div>            
-               
-          </div>
-      
-      
-          <div class="col-3 offset-1">
-              <div class="row">
-                <div class="col-12">
-                    <ul>
-                        <li class="border-0 active">المشتريات</li>
-                        <li routerLink="addresses"> عناوين الشحن</li>
-                        <li>المفضلة</li>
-                        <li>اعدادات الحساب</li>
-                      </ul>
-      
-                </div>
-      
-              </div>
-      
+    </section>  
+    <div class="profileproducts">
+    
+    <section class="profile container py-5">
             <div class="row">
-                <div class="col-12 mb-2">
-                    <img src="https://placehold.it/400x400" class="img-fluid"alt="">
-                </div>        
-                
-                <div class="col-12  mb-2">
-                    <img src="https://placehold.it/400x800" class="img-fluid"alt="">
-                </div>       
-                  
-                <div class="col-12 mb-2">
-                    <img src="https://placehold.it/400x600" class="img-fluid"alt="">
-                </div>                 
+              <div class="col-8 ">                
+                    <div class="row Product align-items-center py-4" *ngFor="let item of prods">
+                        <div class="col-8 ">
+                            <h4 class="text-right">{{item.prod?.ProductName}} </h4>
+                            <p class="text-right">{{item.prod?.Quantity}} الكمية  </p>
+                            <div class="text-right mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-right"> <span>{{item?.date | date}} تاريخ الطلب </span></p>
+                            <p class="text-right"><a href=""  class="text-right">تفاصيل الطلب</a></p> 
+                        </div>
+                        <div class="col-4">
+                            <img src="http://gearapi.azurewebsites.net/Content/ProdImages/{{item.prod.Imgs[0].ImgUrl}}" alt="" class="img-fluid">
+                            </div>
+                        </div>            
+              </div>
+          
+          
+              <div class="col-3 offset-1">
+                  <div class="row">
+                    <div class="col-12">
+                        <ul>
+                            <li class="border-0 active">المشتريات</li>
+                            <li routerLink="../userorders">طلبات القطع خاصتى</li>
+                            <li routerLink="../addresses"> عناوين الشحن</li>
+                            <li>اعدادات الحساب</li>
+                          </ul>
+          
+                    </div>
+          
+                  </div>
+          
+                <div class="row imgs">
+                    <div class="col-12 mb-4">
+                        <img src="/assets/img/Adv/ad3.jpg" class="img-fluid"alt="">
+                    </div>        
+                    
+                    <div class="col-12  mb-4">
+                        <img src="/assets/img/Adv/ad1.jpg" class="img-fluid"alt="">
+                    </div>       
+                      
+                    <div class="col-12 mb-4">
+                        <img src="/assets/img/Adv/ad2.jpg" class="img-fluid"alt="">
+                    </div>                 
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-      
-      
-      <div class="title text-center">
-          <h3 class="d-inline"> شاهدته مؤخرا</h3> 
-       </div>
-       <section class="productSec py-3">
-           <div class="container-fluid">
-               <div class="row">
-                   <div class="col-lg-2 col-sm-4 col-6 mb-5 d-flex align-items-stretch">
-                       <div class="card-group">
-                           <div class="card">
-                               <img class="card-img-top" src="../../assets/img/part1.jpg" alt="Card image cap">
-                               <div class="card-body p-0 pt-3 ">
-                                   <h6 class="card-title text-right">سير قطع غيار لسكوتر كهربائي بعرcol-2 ض ١٢ مللي</h6>
-                                   <div class="card-text">
-                                       <div class="row text-right">
-                                         <div class="col-5"><p>(150)</p></div>
-                                         <div class="col-7 text-right">
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                         </div>
-                                         
-                                         <!-- <div class="col-12"><p class="text-right">سعيد نصار</p></div> -->
-                                         <div class="col-12"><p>1000 جنيه</p></div>
-                                       </div>
-                                     </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-lg-2 col-sm-4 col-6  mb-5 d-flex align-items-stretch">
-                       <div class="card-group">
-                           <div class="card">
-                               <img class="card-img-top" src="../../assets/img/part1.jpg" alt="Card image cap">
-                               <div class="card-body p-0 pt-3 ">
-                                   <h6 class="card-title text-right">سير قطع غيار لسكوتر كهربائي بعرض ١٢ مللي</h6>
-                                   <div class="card-text">
-                                       <div class="row text-right">
-                                         <div class="col-5"><p>(150)</p></div>
-                                         <div class="col-7 text-right">
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                         </div>
-                                         
-                                         <!-- <div class="col-12"><p class="text-right">سعيد نصار</p></div> -->
-                                         <div class="col-12"><p>1000 جنيه</p></div>
-                                       </div>
-                                     </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-lg-2 col-sm-4 mb-5 col-6  d-flex align-items-stretch">
-                       <div class="card-group">
-                           <div class="card">
-                               <img class="card-img-top" src="../../assets/img/part1.jpg" alt="Card image cap">
-                               <div class="card-body p-0 pt-3 ">
-                                   <h6 class="card-title text-right">سير قطع غيار لسكوتر كهربائي بعرض ١٢ مللي</h6>
-                                   <div class="card-text">
-                                       <div class="row text-right">
-                                         <div class="col-5"><p>(150)</p></div>
-                                         <div class="col-7 text-right">
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                         </div>
-                                         
-                                         <!-- <div class="col-12"><p class="text-right">سعيد نصار</p></div> -->
-                                         <div class="col-12"><p>1000 جنيه</p></div>
-                                       </div>
-                                     </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-lg-2 col-sm-4 col-6  mb-5 d-flex align-items-stretch">
-                       <div class="card-group">
-                           <div class="card">
-                               <img class="card-img-top" src="../../assets/img/part1.jpg" alt="Card image cap">
-                               <div class="card-body p-0 pt-3 ">
-                                   <h6 class="card-title text-right">سير قطع غيار لسكوتر كهربائي بعرض ١٢ مللي</h6>
-                                   <div class="card-text">
-                                       <div class="row text-right">
-                                         <div class="col-5"><p>(150)</p></div>
-                                         <div class="col-7 text-right">
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                         </div>
-                                         
-                                         <!-- <div class="col-12"><p class="text-right">سعيد نصار</p></div> -->
-                                         <div class="col-12"><p>1000 جنيه</p></div>
-                                       </div>
-                                     </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-lg-2 col-sm-4 col-6 mb-5 d-flex align-items-stretch">
-                       <div class="card-group">
-                           <div class="card">
-                               <img class="card-img-top" src="../../assets/img/part1.jpg" alt="Card image cap">
-                               <div class="card-body p-0 pt-3 ">
-                                   <h6 class="card-title text-right">سير قطع غيار لسكوتر كهربائي بعرض ١٢ مللي</h6>
-                                   <div class="card-text">
-                                       <div class="row text-right">
-                                         <div class="col-5"><p>(150)</p></div>
-                                         <div class="col-7 text-right">
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                         </div>
-                                         
-                                         <!-- <div class="col-12"><p class="text-right">سعيد نصار</p></div> -->
-                                         <div class="col-12"><p>1000 جنيه</p></div>
-                                       </div>
-                                     </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-lg-2 col-sm-4 col-6 mb-5 d-flex align-items-stretch">
-                       <div class="card-group">
-                           <div class="card">
-                               <img class="card-img-top" src="../../assets/img/part1.jpg" alt="Card image cap">
-                               <div class="card-body p-0 pt-3 ">
-                                   <h6 class="card-title text-right">سير قطع غيار لسكوتر كهربائي بعرض ١٢ مللي</h6>
-                                   <div class="card-text">
-                                       <div class="row text-right">
-                                         <div class="col-5"><p>(150)</p></div>
-                                         <div class="col-7 text-right">
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                             <i class="fas fa-star"></i>
-                                         </div>
-                                         
-                                         <!-- <div class="col-12"><p class="text-right">سعيد نصار</p></div> -->
-                                         <div class="col-12"><p>1000 جنيه</p></div>
-                                       </div>
-                                     </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </section>
-</div>
-
+          </section>
+          
+    
+         
+    </div>
+    
+    

@@ -38,7 +38,7 @@ a=>{
   }
 
   edit(prodid : number){
-    alert(prodid)
+   
   this.router.navigate([`/editProduct/${prodid}`]);
   }
   delete(prodid : number){
@@ -46,7 +46,7 @@ a=>{
  if  (confirm("Are you sure to delete this product ?"))
  {
   this.data.DeleteProduct(prodid,this.token).subscribe(
-    a=>alert(a),
+    a=>location.reload(),
     e=>alert(e)
   )
 
